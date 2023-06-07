@@ -18,11 +18,18 @@ const About = () => {
               Please take a look around.</p>
           </div>
           <div>
-            <p>I am passionate about building excellent  software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprice corporations. What would you do if you had
-              a software expert avaliable at your fingertips?</p>
+            <p>I am passionate about building excellent software that improves
+              the lives of those around me. While I may not have professional experience working in a business setting yet,
+              I am eager to showcase my skills and contribute to real-world projects.
+              I am adept at creating visually appealing and responsive user interfaces using HTML and CSS, and I have the ability to add interactivity and dynamic functionality with JavaScript.</p>
+            <br />
+            <p>On the back-end, I can build basic server-side applications, handle data processing, and interact with databases.
+              I am familiar with frameworks such as Express.js, enabling me to develop APIs and integrate with server systems.
+              Additionally, I have experience working with MongoDB, a popular NoSQL database, allowing me to efficiently store and retrieve data for web applications.</p>
+            <br />
+            <p className='text-1xl sm:text-1xl font-bold text-[#ccd6fd]'>
+              What opportunities would arise with an ambitious and proactive team member,
+              fueled by a strong desire to learn and enhance your software development skills?</p>
           </div>
         </div>
       </div>

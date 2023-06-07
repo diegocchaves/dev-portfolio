@@ -1,5 +1,5 @@
 import React from 'react'
-import BeachSpaceLogo from '../assets/images/bs-logo1.png'
+import BeachSpaceLogo from '../assets/images/bs-image.png'
 
 const Work = () => {
   return (
@@ -11,7 +11,7 @@ const Work = () => {
         </div>
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          <div style={{ backgroundImage: `url(${BeachSpaceLogo})` }} className='bg-white shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+          <div style={{ backgroundImage: `url(${BeachSpaceLogo})` }} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>

@@ -2,6 +2,7 @@ import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 
+
 const Home = () => {
   return (
     <div name='home' className='w-full h-screen bg-[#0a192f]' >
@@ -14,15 +15,13 @@ const Home = () => {
           I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. My goal is to collaborate with other
           like-minded individuals and businesses to create meaningful solutions that make an impact in the world.</p>
         <p className='text-1xl sm:text-1xl font-bold text-[#ccd6fd]'>Let's create something great together!</p>
-        <div>
+        <Link to='work'>
           <button className='text-white group border-2 px-6 py-3 my-5 flex items-center hover:bg-[#28bdec] hover:border-[#28bdec]'>View Work
             <span className='duration-300 group-hover:rotate-90'>
               <HiArrowNarrowRight className='ml-3' />
             </span>
           </button>
-
-        </div>
-
+        </Link>
       </div>
     </div>
   )

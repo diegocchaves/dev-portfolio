@@ -13,7 +13,7 @@ const Work = () => {
   ];
 
   return (
-    <div name='work' className=' bg-[#0a192f] text-gray-300 md:pt-20 pt-56'>
+    <div name='work' className=' bg-[#0a192f] text-gray-300 md:pt-40 pt-20'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 border-[#28bdec]'>Work</p>
@@ -34,13 +34,13 @@ const Work = () => {
               />
 
               <div className='relative flex flex-col items-center justify-center'>
-                <p className='mb-6 text-xl font-bold'>{work.label}</p>
-                <div className='flex flex-row items-center justify-center gap-6'>
-                  <a href={work.href} className='block py-4 text-2xl transition hover:text-purple-800'>
-                    <button className='px-4 py-3 m-2 text-sm font-medium text-center text-gray-700 bg-[#ccd6fde0] rounded-lg'>Code</button>
+                <p className='mb-12 text-xl font-bold'>{work.label}</p>
+                <div className='flex flex-row items-center justify-center gap-3'>
+                  <a href={work.href} className='py-4 text-2xl transition hover:text-purple-800'>
+                    <button className='px-4 py-2 m-2 text-sm font-medium text-center text-gray-700 bg-[#ccd6fde0] rounded-lg'>Code</button>
                   </a>
-                  <a href={work.url} className='block py-4 text-2xl transition hover:text-purple-800'>
-                    <button className='px-4 py-3 m-2 text-sm font-medium text-center text-gray-700 bg-[#ccd6fde0] rounded-lg'>Web</button>
+                  <a href={work.url} className='py-4 text-2xl transition hover:text-purple-800'>
+                    <button className='px-4 py-2 m-2 text-sm font-medium text-center text-gray-700 bg-[#ccd6fde0] rounded-lg'>Web</button>
                   </a>
                 </div>
               </div>

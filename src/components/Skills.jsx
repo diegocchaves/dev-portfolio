@@ -12,7 +12,7 @@ import Next from '../assets/images/nextjs.png'
 
 const Skills = () => {
   return (
-    <div name='skills' className=' bg-[#0a192f] text-gray-300 md:pt-20 pt-20'>
+    <div name='skills' className=' bg-[#0a192f] text-gray-300 md:pt-40 pt-20'>
       {/* Contanier */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div>

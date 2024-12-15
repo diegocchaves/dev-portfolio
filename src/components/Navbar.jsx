@@ -1,49 +1,51 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { BsFillPersonLinesFill, BsTwitterX } from 'react-icons/bs'
 import Logo from '../assets/images/logo.png'
 import { Link } from 'react-scroll'
-
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
 
+  const links = [
+    { label: 'Home', to: "home" },
+    { label: 'About', to: "about" },
+    { label: 'Skills', to: "skills" },
+    { label: 'Work', to: "work" },
+    { label: 'Contact', to: "contact" }
+  ]
+
+  const icons = [
+    { icon: <FaLinkedin size={30} />, label: 'Linkedin', href: 'https://www.linkedin.com/in/diego-carve/', bgColor: 'bg-[#4267b2]' },
+    { icon: <FaGithub size={30} />, label: 'Github', href: 'https://github.com/Diegocchaves', bgColor: 'bg-[#333333]' },
+    { icon: <BsTwitterX size={25} />, label: 'twiter/X', href: 'https://twitter.com/diego_carve', bgColor: 'bg-[#1da1f2]' },
+    { icon: <HiOutlineMail size={30} />, label: 'Email', href: '/', bgColor: 'bg-[#6fc2b0]' },
+    { icon: <BsFillPersonLinesFill size={30} />, label: 'Resume', href: '/', bgColor: 'bg-[#565f69]' },
+  ]
+
   return (
-    <div className='fixed z-10 w-full h-[80px] flex justify-between items-center px4 bg-[#0a192f] text-gray-300'>
+    <div className='fixed z-10 w-full h-[80px] flex justify-between items-center px-4 md:px-6  bg-[#0a192f] text-gray-300'>
       <div>
         <img src={Logo} alt="Logo image" style={{ width: '100px' }} />
       </div>
 
       {/* menu */}
-      <ul className='hidden md:flex'>
-        <li>
-          <Link to="home" smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="skills" smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link to="work" smooth={true} duration={500}>
-            Work
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" smooth={true} duration={500}>
-            Contact
-          </Link>
-        </li>
-      </ul>
+      <nav className='hidden gap-14 w-fit md:flex'>
+        {links.map((link, index) => (
+          <div key={index}
+            className='flex items-center w-full '>
+            <Link to={link.to}
+              smooth={true}
+              duration={500}
+              className='cursor-pointer'>
+              <p className='text-white transition hover:text-[#1da1f2]'>{link.label}</p>
+            </Link>
+          </div>
+        )
+        )}
+      </nav>
 
       {/* hamburge */}
       <div onClick={handleClick} className='z-10 md:hidden'>
@@ -51,64 +53,34 @@ const Navbar = () => {
       </div>
 
       {/* mobile menu */}
-      <ul className={!nav ? 'hidden' : ' absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-            Home
+      <nav className={!nav ? 'hidden' : ' absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center gap-16'}>
+        {links.map((link, index) => (
+          <Link key={index}
+            to={link.to}
+            smooth={true}
+            duration={500}
+            onClick={() => setNav(false)}
+            className='items-center justify-center text-xl text-white'>
+            <p>{link.label}</p>
           </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to="work" smooth={true} duration={500}>
-            Work
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-            Contact
-          </Link></li>
-      </ul>
+        ))}
+      </nav>
 
       {/* social icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-        <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#4267b2]'>
-            <a className='flex items-center justify-between w-full text-gray-300 ' href="https://www.linkedin.com/in/chaves-diego/">
-              Linkedin <FaLinkedin size={30} />
+      <nav className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+        {icons.map((icon, index) => (
+          <div key={index} className={`w-[160px] h-[60px] flex justify-between items-center ml-[-88px] hover:ml-[-10px] duration-300 ${icon.bgColor}`}>
+            <a
+              to={icon.href}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center justify-around w-full gap-4 px-4 text-gray-300'>
+              <p>{icon.label}</p>
+              {icon.icon}
             </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-            <a className='flex items-center justify-between w-full text-gray-300 ' href="https://github.com/Diegocchaves">
-              Github <FaGithub size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#1da1f2]'>
-            <a className='flex items-center justify-between w-full text-gray-300 ' href="https://twitter.com/diego_carve">
-              Twitter <FaTwitter size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-            <a className='flex items-center justify-between w-full text-gray-300 ' href="/">
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-            <a className='flex items-center justify-between w-full text-gray-300 ' href="/">
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
-        </ul>
-
-      </div>
+          </div>
+        ))}
+      </nav>
     </div >
   )
 }

@@ -5,7 +5,7 @@ import { Link } from 'react-scroll'
 
 const Home = () => {
   return (
-    <div name='home' className=' bg-[#0a192f] md:pt-20 pt-20' >
+    <div name='home' className=' bg-[#0a192f] md:pt-40 pt-20' >
       {/* Container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-[#28bdec]'>Hi, my name is</p>
@@ -15,7 +15,7 @@ const Home = () => {
           I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. My goal is to collaborate with other
           like-minded individuals and businesses to create meaningful solutions that make an impact in the world.</p>
         <p className='text-1xl sm:text-1xl font-bold text-[#ccd6fd]'>Let's create something great together!</p>
-        <Link to='work'>
+        <Link to='work' smooth={true} duration={500} className='cursor-pointer' >
           <button className='text-white group border-2 px-6 py-3 my-5 flex items-center hover:bg-[#28bdec] hover:border-[#28bdec]'>View Work
             <span className='duration-300 group-hover:rotate-90'>
               <HiArrowNarrowRight className='ml-3' />

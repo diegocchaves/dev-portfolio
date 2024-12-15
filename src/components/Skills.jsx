@@ -7,10 +7,12 @@ import Node from '../assets/images/node.png'
 import GitHub from '../assets/images/github.png'
 import Tailwind from '../assets/images/tailwind.png'
 import Mongo from '../assets/images/mongo.png'
+import TypeScript from '../assets/images/typescript.svg'
+import Next from '../assets/images/nextjs.png'
 
 const Skills = () => {
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f]  text-gray-300'>
+    <div name='skills' className=' bg-[#0a192f] text-gray-300 md:pt-20 pt-20'>
       {/* Contanier */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div>
@@ -18,7 +20,7 @@ const Skills = () => {
           <p className='py-4'>// These are the technologies I've working with</p>
         </div>
 
-        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 '>
+        <div className='grid w-full grid-cols-2 gap-4 py-8 text-center sm:grid-cols-4 '>
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
             <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
             <p className='my-4'>HTML</p>
@@ -50,6 +52,14 @@ const Skills = () => {
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
             <img className='w-20 mx-auto' src={GitHub} alt="GitHub icon" />
             <p className='my-4'>GitHub</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
+            <img className='mx-auto w-28' src={TypeScript} alt="Type Script icon" />
+            <p className='my-4'>Type Script</p>
+          </div>
+          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
+            <img className='mx-auto w-28 ' src={Next} alt="Next.js icon" />
+            <p className='my-4'>Next.js</p>
           </div>
 
         </div>

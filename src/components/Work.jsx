@@ -1,8 +1,8 @@
 import React from 'react';
 import BeachSpaceImage from '../assets/images/bs-logo.png';
-import CuidandoDoMoneyImage from '../assets/images/cuidando-do-money-logo.svg';
-import MicroActionsImage from '../assets/images/micro-act-logo.svg';
-import FaenaAppImage from '../assets/images/faena-image.svg';
+import CuidandoDoMoneyImage from '../assets/images/cdm-logo.svg';
+import MicroActionsImage from '../assets/images/micro-actions-logo.svg';
+import FaenaAppImage from '../assets/images/faena-green-logo.svg';
 
 const Work = () => {
   const works = [
@@ -13,7 +13,7 @@ const Work = () => {
   ];
 
   return (
-    <div name='work' className='w-full md:h-screen bg-[#0a192f] text-gray-300'>
+    <div name='work' className=' bg-[#0a192f] text-gray-300 md:pt-20 pt-56'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 border-[#28bdec]'>Work</p>
@@ -24,23 +24,23 @@ const Work = () => {
           {works.map((work, index) => (
             <div
               key={index}
-              className='relative shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+              className="relative shadow-lg bg-[#0e203b] shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div overflow-hidden"
             >
               {/* Background Image */}
-              <div
-                className='absolute inset-0 transition-all duration-300 bg-center bg-cover rounded-md opacity-5 group-hover:opacity-100 group-hover:scale-105'
-                style={{
-                  backgroundImage: `url(${work.image})`,
-                }}
-              ></div>
-              <div className='relative z-10 flex flex-col items-center justify-center'>
+              <img
+                src={work.image}
+                alt={work.label}
+                className="absolute items-center justify-center object-cover transition-all duration-300 rounded-md opacity-0 group-hover:opacity-100 group-hover:scale-95"
+              />
+
+              <div className='relative flex flex-col items-center justify-center'>
                 <p className='mb-6 text-xl font-bold'>{work.label}</p>
                 <div className='flex flex-row items-center justify-center gap-6'>
                   <a href={work.href} className='block py-4 text-2xl transition hover:text-purple-800'>
-                    <button className='px-4 py-3 m-2 text-sm font-medium text-center text-gray-700 bg-white rounded-lg'>Code</button>
+                    <button className='px-4 py-3 m-2 text-sm font-medium text-center text-gray-700 bg-[#ccd6fde0] rounded-lg'>Code</button>
                   </a>
                   <a href={work.url} className='block py-4 text-2xl transition hover:text-purple-800'>
-                    <button className='px-4 py-3 m-2 text-sm font-medium text-center text-gray-700 bg-white rounded-lg'>Web</button>
+                    <button className='px-4 py-3 m-2 text-sm font-medium text-center text-gray-700 bg-[#ccd6fde0] rounded-lg'>Web</button>
                   </a>
                 </div>
               </div>

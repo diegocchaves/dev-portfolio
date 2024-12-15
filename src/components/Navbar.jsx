@@ -73,7 +73,7 @@ const Navbar = () => {
             <a
               href={icon.href}
               target='_blank'
-              // rel='noopener noreferrer'
+              rel='noopener noreferrer'
               className='flex items-center justify-around w-full gap-4 px-4 text-gray-300'>
               <p>{icon.label}</p>
               {icon.icon}

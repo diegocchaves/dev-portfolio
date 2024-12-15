@@ -71,9 +71,9 @@ const Navbar = () => {
         {icons.map((icon, index) => (
           <div key={index} className={`w-[160px] h-[60px] flex justify-between items-center ml-[-88px] hover:ml-[-10px] duration-300 ${icon.bgColor}`}>
             <a
-              to={icon.href}
+              href={icon.href}
               target='_blank'
-              rel='noopener noreferrer'
+              // rel='noopener noreferrer'
               className='flex items-center justify-around w-full gap-4 px-4 text-gray-300'>
               <p>{icon.label}</p>
               {icon.icon}

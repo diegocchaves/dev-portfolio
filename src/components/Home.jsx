@@ -1,7 +1,7 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import Photo from "../assets/images/dev-bckgrd.svg"
+import Photo from '../assets/images/dev-bckgrd.svg' // Ensure this path is correct
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <div className='flex items-center justify-center w-full h-full space-y-10'>
       <div className='flex flex-col justify-start px-8 mx-auto'>
         {/* <p className='text-gray-100'>Hi, my name is</p> */}
-        <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mb-28'>Diego</h1>
+        <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mt-24 mb-28'>Diego</h1>
         <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mb-16'>Carvalho</h1>
         <span className='block text-[#8892b0] text-lg py-4 w-fit'>2 years+ collaborating with others 
           like-minded individuals and businesses <br />

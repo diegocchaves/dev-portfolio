@@ -1,8 +1,7 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
-import Photo from '../assets/images/dev-bckgrd.svg'
-
+import Photo from "../assets/images/dev-bckgrd.svg"
 
 const Home = () => {
   return (

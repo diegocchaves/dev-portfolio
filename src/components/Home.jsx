@@ -1,27 +1,40 @@
 import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
+import Photo from '../assets/images/dev-bckgrd.svg'
 
 
 const Home = () => {
   return (
-    <div name='home' className=' bg-[#0a192f] md:pt-40 pt-20' >
+    <div style={{
+            backgroundImage: `linear-gradient(rgba(10,25,47, -20.95), rgba(10,25,47, 20.05)), url(${Photo})`,
+            backgroundBlendMode: 'color-dodge',
+            backgroundSize: 'inherit',
+            backgroundPosition: 'inherit',
+            backgroundRepeat: 'no-repeat',
+        }} name='home' className='w-full h-full py-20 bg-black bg-opacity-60 lg:w-screen lg:h-screen md:py-40' >
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-[#28bdec]'>Hi, my name is</p>
-        <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6fd]'>Diego Carvalho</h1>
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a full-stack developer.</h2>
-        <p className='text-[#8892b0] py-4 max-w-[700px]'>I'm a passionate entry-level full-stack developer who is embarking on an exciting journey in the field of web development.
+      <div className='flex items-center justify-center w-full h-full space-y-10'>
+      <div className='flex flex-col justify-start px-8 mx-auto'>
+        {/* <p className='text-gray-100'>Hi, my name is</p> */}
+        <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mb-28'>Diego</h1>
+        <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mb-16'>Carvalho</h1>
+        <span className='block text-[#8892b0] text-lg py-4 w-fit'>2 years+ collaborating with others 
+          like-minded individuals and businesses <br />
+           to create meaningful solutions that make an impact in the world.</span>
+        {/* <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a full-stack developer.</h2> */}
+        {/* <p className='text-[#8892b0] py-4 max-w-[700px]'>I'm a passionate entry-level full-stack developer who is embarking on an exciting journey in the field of web development.
           I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. My goal is to collaborate with other
           like-minded individuals and businesses to create meaningful solutions that make an impact in the world.</p>
-        <p className='text-1xl sm:text-1xl font-bold text-[#ccd6fd]'>Let's create something great together!</p>
+        <p className='text-1xl sm:text-1xl font-bold text-[#ccd6fd]'>Let's create something great together!</p> */}
         <Link to='work' smooth={true} duration={500} className='cursor-pointer' >
-          <button className='text-white group border-2 px-6 py-3 my-5 flex items-center hover:bg-[#28bdec] hover:border-[#28bdec]'>View Work
+          <button className='flex items-center px-6 py-3 my-5 text-black bg-gray-100 border-2 rounded-md group hover:bg-gray-900 hover:border-gray-50 hover:text-white'>View Work
             <span className='duration-300 group-hover:rotate-90'>
               <HiArrowNarrowRight className='ml-3' />
             </span>
           </button>
         </Link>
+      </div>
       </div>
     </div>
   )

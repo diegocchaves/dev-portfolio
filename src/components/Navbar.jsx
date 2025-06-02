@@ -10,13 +10,13 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   const links = [
-    { label: '[', to: "home" },
+    { label: '[', to: "" },
     { label: 'Home,', to: "home" },
     { label: 'About,', to: "about" },
     { label: 'Skills,', to: "skills" },
     { label: 'Work,', to: "work" },
     { label: 'Contact', to: "contact" },
-    { label: ']', to: "home" },
+    { label: ']', to: "" },
   ]
 
   const icons = [
@@ -28,7 +28,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 md:px-6  bg-black text-gray-30 '>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 md:px-6 bg-black text-gray-30 z-10'>
       <div className='flex items-center justify-start '>
         <Link to='home' smooth={true} duration={500} className='flex justify-start cursor-pointer'>
           <img src={Logo} alt='logo' className='w-8 h-8' />
@@ -42,8 +42,10 @@ const Navbar = () => {
             <Link to={link.to}
               smooth={true}
               duration={500}
-              className='cursor-pointer'>
-              <p className='text-white text-sm font-extralight transition hover:text-[#1da1f2]'>{link.label}</p>
+              className='cursor-pointer text-white text-sm transition hover:text-[#1da1f2] hover:font-bold font-extralight '
+              activeClass='active-link'
+              spy={true}>
+              {link.label}
             </Link>
           </div>
         )
@@ -78,7 +80,7 @@ const Navbar = () => {
               target='_blank'
               rel='noopener noreferrer'
               className='flex items-center justify-around w-full gap-4 px-4 text-gray-300'>
-              <p>{icon.label}</p>
+              <p className={`${icon.color}`}>{icon.label}</p>
               {icon.icon}
             </a>
           </div>

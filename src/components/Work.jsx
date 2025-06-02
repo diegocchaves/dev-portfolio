@@ -13,7 +13,7 @@ const Work = () => {
   ];
 
   return (
-    <div name='work' className='pt-20 text-gray-300 bg-black md:pt-40'>
+    <div name='work' className='pt-20 text-gray-300 bg-black md:pt-40 insert-0'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='flex flex-col items-center pb-8 '>
           <p className='inline text-lg font-bold md:text-xl'>[ Work ]</p>

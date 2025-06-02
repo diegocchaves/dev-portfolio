@@ -10,11 +10,13 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   const links = [
-    { label: '[Home,', to: "home" },
+    { label: '[', to: "home" },
+    { label: 'Home,', to: "home" },
     { label: 'About,', to: "about" },
     { label: 'Skills,', to: "skills" },
     { label: 'Work,', to: "work" },
-    { label: 'Contact]', to: "contact" }
+    { label: 'Contact', to: "contact" },
+    { label: ']', to: "home" },
   ]
 
   const icons = [
@@ -26,18 +28,17 @@ const Navbar = () => {
   ]
 
   return (
-    <div className='fixed z-10 w-full h-[80px] flex justify-between items-center px-4 md:px-6  bg-black text-gray-30 font-mono'>
-      <div>
-        <Link to='home' smooth={true} duration={500} className='cursor-pointer'>
-          <img src={Logo} alt='logo' className='w-8 h-8 ml-6' />
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 md:px-6  bg-black text-gray-30 '>
+      <div className='flex items-center justify-start '>
+        <Link to='home' smooth={true} duration={500} className='flex justify-start cursor-pointer'>
+          <img src={Logo} alt='logo' className='w-8 h-8' />
         </Link>
       </div>
 
       {/* menu */}
-      <nav className='hidden gap-3 w-fit md:flex'>
+      <nav className='justify-end hidden gap-2 w-80 md:flex'>
         {links.map((link, index) => (
-          <div key={index}
-            className='flex items-center w-full '>
+          <div key={index} >
             <Link to={link.to}
               smooth={true}
               duration={500}

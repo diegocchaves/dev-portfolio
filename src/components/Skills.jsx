@@ -11,61 +11,38 @@ import TypeScript from '../assets/images/typescript.svg'
 import Next from '../assets/images/nextjs.png'
 
 const Skills = () => {
+  const skills = [
+    { src: HTML, alt: "HTML icon" },
+    { src: CSS, alt: "CSS icon" },
+    { src: JavaScript, alt: "JavaScript icon" },
+    { src: ReactImg, alt: "React icon" },
+    { src: Node, alt: "Node.js icon" },
+    { src: Mongo, alt: "MongoDB icon" },
+    { src: Tailwind, alt: "Tailwind CSS icon" },
+    { src: GitHub, alt: "GitHub icon" },
+    { src: TypeScript, alt: "TypeScript icon", className: 'w-28' },
+    { src: Next, alt: "Next.js icon", className: 'w-28' }
+  ];
   return (
-    <div name='skills' className='pt-20 text-gray-300 bg-black  md:pt-40'>
+    <div name='skills' className='pt-20 text-gray-300 bg-black md:pt-40'>
       {/* Contanier */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div>
-          <p className='text-4xl font-bold inline border-b-4 border-[#28bdec]'>Skills</p>
+        <div className='flex flex-col items-center '>
+          <p className='inline text-lg font-bold md:text-xl'>[ Skills ]</p>
           <p className='py-4'>// These are the technologies I've working with</p>
         </div>
 
         <div className='grid w-full grid-cols-2 gap-4 py-8 text-center sm:grid-cols-4 '>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
-            <p className='my-4'>HTML</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={CSS} alt="CSS icon" />
-            <p className='my-4'>CSS</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={JavaScript} alt="JavaScript icon" />
-            <p className='my-4'>JavaScript</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={ReactImg} alt="React icon" />
-            <p className='my-4'>React</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={Node} alt="Node icon" />
-            <p className='my-4'>Node.js</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={Mongo} alt="MongoDB icon" />
-            <p className='my-4'>Mongo DB</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={Tailwind} alt="Tailwind icon" />
-            <p className='my-4'>Tailwind</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='w-20 mx-auto' src={GitHub} alt="GitHub icon" />
-            <p className='my-4'>GitHub</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='mx-auto w-28' src={TypeScript} alt="Type Script icon" />
-            <p className='my-4'>Type Script</p>
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500' >
-            <img className='mx-auto w-28 ' src={Next} alt="Next.js icon" />
-            <p className='my-4'>Next.js</p>
-          </div>
-
+          {skills.map((skill, index) => ( 
+            <div key={index} className='shadow-md hover:shadow-[#2e2e2f] hover:scale-110 duration-500'>
+              <img className={`w-20 mx-auto ${skill.className || ''}`} src={skill.src} alt={skill.alt} />
+              <p className='my-4'>{skill.alt.split(' ')[0]}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Skills

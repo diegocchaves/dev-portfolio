@@ -11,16 +11,17 @@ const Home = () => {
             backgroundSize: 'inherit',
             backgroundPosition: 'inherit',
             backgroundRepeat: 'no-repeat',
-        }} name='home' className='w-full h-full py-20 bg-black bg-opacity-60 lg:w-screen lg:h-screen md:py-40' >
+        }} name='home' className='w-full h-full py-20 bg-black bg-opacity-60 md:py-40' >
       {/* Container */}
       <div className='flex items-center justify-center w-full h-full space-y-10'>
-      <div className='flex flex-col justify-start px-8 mx-auto'>
-        {/* <p className='text-gray-100'>Hi, my name is</p> */}
-        <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mt-24 mb-28'>Diego</h1>
-        <h1 className='font-mono text-4xl font-bold text-white md:text-[11rem] mb-16'>Carvalho</h1>
-        <span className='block text-[#8892b0] text-lg py-4 w-fit'>2 years+ collaborating with others 
-          like-minded individuals and businesses <br />
-           to create meaningful solutions that make an impact in the world.</span>
+      <div className='flex flex-col justify-start px-8 mx-auto max-w-[1000px]'>
+        <h1 className=' text-4xl font-bold text-white md:text-[11rem] mt-24 mb-28'>Diego</h1>
+        <h1 className=' text-4xl font-bold text-white md:text-[11rem] mb-16'>Carvalho</h1>
+        <span className='block text-[#8892b0] text-lg py-4 w-fit'>I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. <br />
+        My goal is to collaborate with other
+          like-minded individuals and businesses
+           to create meaningful solutions <br />
+            that make an impact in the world.</span>
         {/* <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a full-stack developer.</h2> */}
         {/* <p className='text-[#8892b0] py-4 max-w-[700px]'>I'm a passionate entry-level full-stack developer who is embarking on an exciting journey in the field of web development.
           I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. My goal is to collaborate with other

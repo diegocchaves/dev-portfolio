@@ -2,14 +2,14 @@ import React from 'react';
 import BeachSpaceImage from '../assets/images/bs-logo.png';
 import CuidandoDoMoneyImage from '../assets/images/cdm-logo.svg';
 import MicroActionsImage from '../assets/images/micro-actions-logo.svg';
-import FaenaAppImage from '../assets/images/faena-green-logo.svg';
+import MicroActionsBlog from "../assets/images/micro-act-name-logo.svg";
 
 const Work = () => {
   const works = [
     { label: 'Beach Space', href: 'https://github.com/diegocchaves/beach-space', url: 'https://beach-space.vercel.app/login', image: BeachSpaceImage },
     { label: 'Cuidando do Money', href: 'https://github.com/diegocchaves/cuidando-do-money', url: 'https://cuidandodomoney.vercel.app/', image: CuidandoDoMoneyImage },
     { label: 'Micro Actions', href: 'https://github.com/diegocchaves/micro-actions', url: '', image: MicroActionsImage },
-    { label: 'Faena App', href: 'https://github.com/diegocchaves/faena-app', url: '', image: FaenaAppImage },
+    { label: 'Micro Actions Blog', href: 'https://www.microactions.blog/', url: '', image: MicroActionsBlog}, 
   ];
 
   return (

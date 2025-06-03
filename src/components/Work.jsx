@@ -1,8 +1,8 @@
 import React from 'react';
-import BeachSpaceImage from '../assets/images/bs-logo.png';
-import CuidandoDoMoneyImage from '../assets/images/cdm-logo.svg';
-import MicroActionsImage from '../assets/images/micro-actions-logo.svg';
-import MicroActionsBlog from "../assets/images/micro-act-name-logo.svg";
+import BeachSpaceImage from '../assets/images/bs-mockup.svg';
+import CuidandoDoMoneyImage from '../assets/images/cm-mockup.svg'
+import MicroActionsImage from '../assets/images/ma-mockup.svg'
+import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
 
 const Work = () => {
   const works = [
@@ -31,7 +31,7 @@ const Work = () => {
               <img
                 src={work.image}
                 alt={work.label}
-                className="flex items-center justify-center w-40 h-40 p-2 m-2 transition-transform duration-300 ease-in-out rounded  md:w-fit md:h-fit"
+                className="flex items-center justify-center w-40 h-40 p-2 m-2 transition-transform duration-300 ease-in-out rounded md:w-fit md:h-fit"
               />
               </div>
             </div>

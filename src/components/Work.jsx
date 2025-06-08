@@ -6,20 +6,11 @@ import MicroActionsImage from '../assets/images/ma-mockup.svg'
 import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
 
 const Work = () => {
-  const status =[
-
-    { label: 'Completed', value: 'Completed', color: 'text-green-500 hover:text-green-800' },  
-    { label: 'On Hold', value: 'On Hold', color:'text-gray-500 hover:text-gray-800' },
-  ]
-
-
-
-  // Array of works
   const works = [
     { label: 'Micro Actions Blog', href: 'https://github.com/diegocchaves/micro-actions-blog', url: 'https://www.microactions.blog', image: MicroActionsBlog, Date: 'Mon May 8 2023 ', value: 'In Progress', color: "text-yellow-500" },
-    { label: 'Micro Actions', href: 'https://github.com/diegocchaves/micro-actions', url: 'https://www.microactions.co', image: MicroActionsImage , Date: 'Mon May 8 2023 ', status: status[0].value},
-    { label: 'Cuidando do Money', href: 'https://github.com/diegocchaves/cuidando-do-money', url: 'https://cuidandodomoney.vercel.app', image: CuidandoDoMoneyImage, Date: 'Mon May 8 2023 ', status: status[1].value },
-    { label: 'Beach Space', href: 'https://github.com/diegocchaves/beach-space', url: 'https://beach-space.vercel.app/login', image: BeachSpaceImage, Date: 'Mon May 8 2023 ', status: status[1].value },
+    { label: 'Micro Actions', href: 'https://github.com/diegocchaves/micro-actions', url: 'https://www.microactions.co', image: MicroActionsImage , Date: 'Mon May 8 2023 ',  value: 'In Progress', color: "text-yellow-500" },
+    { label: 'Cuidando do Money', href: 'https://github.com/diegocchaves/cuidando-do-money', url: 'https://cuidandodomoney.vercel.app', image: CuidandoDoMoneyImage, Date: 'Mon May 8 2023 ', value: 'Completedå', color: "text-green-500" },
+    { label: 'Beach Space', href: 'https://github.com/diegocchaves/beach-space', url: 'https://beach-space.vercel.app/login', image: BeachSpaceImage, Date: 'Mon May 8 2023 ', value: 'Completed', color: "text-green-500" },
   ];
 
   return (
@@ -68,20 +59,6 @@ const Work = () => {
                       </div>
                     </div>
                   </div>
-                  {/* <div className='flex flex-col items-start justify-start mt-4'>
-                    <span className='text-gray-500'>Technologies:</span>
-                    <div className='flex flex-row items-center justify-start gap-2 mt-2'>
-                      <span className='text-sm font-medium text-gray-100'>React</span>
-                      <span className='text-sm font-medium text-gray-100'>Tailwind CSS</span>
-                      <span className='text-sm font-medium text-gray-100'>Node.js</span>
-                      <span className='text-sm font-medium text-gray-100'>Express</span>
-                    </div>
-                    <div className='flex flex-row items-center justify-start gap-2 mt-2'>
-                      <span className='text-sm font-medium text-gray-100'>MongoDB</span>
-                      <span className='text-sm font-medium text-gray-100'>Vercel</span>
-                      <span className='text-sm font-medium text-gray-100'>GitHub</span>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>

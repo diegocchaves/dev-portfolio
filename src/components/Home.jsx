@@ -22,12 +22,7 @@ const Home = () => {
           like-minded individuals and businesses
            to create meaningful solutions <br />
             that make an impact in the world.</span>
-        {/* <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a full-stack developer.</h2> */}
-        {/* <p className='text-[#8892b0] py-4 max-w-[700px]'>I'm a passionate entry-level full-stack developer who is embarking on an exciting journey in the field of web development.
-          I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. My goal is to collaborate with other
-          like-minded individuals and businesses to create meaningful solutions that make an impact in the world.</p>
-        <p className='text-1xl sm:text-1xl font-bold text-[#ccd6fd]'>Let's create something great together!</p> */}
-        <Link to='work' smooth={true} duration={500} className='cursor-pointer' >
+        <Link to='projects' smooth={true} duration={500} className='cursor-pointer' >
           <button className='flex items-center px-6 py-3 my-5 text-black bg-gray-100 border-2 rounded-md group hover:bg-gray-900 hover:border-gray-50 hover:text-white'>View Work
             <span className='duration-300 group-hover:rotate-90'>
               <HiArrowNarrowRight className='ml-3' />

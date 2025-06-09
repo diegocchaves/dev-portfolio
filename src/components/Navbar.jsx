@@ -14,7 +14,7 @@ const Navbar = () => {
     { label: 'Home,', to: "home" },
     { label: 'About,', to: "about" },
     { label: 'Skills,', to: "skills" },
-    { label: 'Work,', to: "work" },
+    { label: 'Projects ,', to: "projects" },
     { label: 'Contact', to: "contact" },
     { label: ']', to: "" },
   ]

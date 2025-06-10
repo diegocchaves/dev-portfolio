@@ -13,6 +13,8 @@ const Contributions = () => {
       Date: "Mon May 8 2023 ",
       value: "In Progress",
       color: "text-yellow-500",
+      commits: 3,
+      stars: 120,
     },
     {
       label: "Public APIs",
@@ -22,13 +24,15 @@ const Contributions = () => {
       Date: "Mon May 8 2023 ",
       value: "In Progress",
       color: "text-yellow-500",
+      contributions: 3,
+      stars: 120,
     },
   ];
 
   return (
     <div
       name="projects"
-      className="pt-20 text-gray-300 bg-black md:pt-40 insert-0"
+      className="py-20 text-gray-300 bg-black md:py-44 insert-0"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center ">
@@ -49,15 +53,14 @@ const Contributions = () => {
           <p className="mr-2 whitespace-nowrap">June 2025</p>
           <div className="flex-1 h-[1px] bg-gray-700 rounded-sm"></div>
         </div>
-        <nav className="grid w-full h-full grid-cols-2 md:flex md:flex-row md:items-start md:justify-start md:gap-4">
+        <nav className="grid items-center justify-center w-full h-full grid-cols-2 gap-4 md:flex md:gap-8">
           {contributions.map((contribution, index) => (
             <div
               key={index}
-              className="flex items-center justify-start md:py-3 md:px-6 "
+              className="flex items-center transition-colors duration-300 border border-gray-700 rounded-lg md:py-5 md:px-5"
             >
-              <div className="flex flex-row items-start justify-start p-4 ">
-                <div className="flex flex-row items-center w-full h-full p-2">
-                  <div className="flex-1 h-[2px] bg-gray-700 rounded-sm rotate-90"></div>
+              <div className="flex flex-row w-full h-full gap-2">
+                <div className="flex flex-row items-center p-2 w-fit h-fit">
                   <FaCodePullRequest
                     className="mr-2 text-green-500 whitespace-nowrap"
                     size={35}
@@ -90,8 +93,8 @@ const Contributions = () => {
                   <p className="text-sm text-gray-500">
                     Last updated: {contribution.Date}
                   </p>
-                  <p className="text-sm text-gray-500">Contributions: 3</p>
-                  <p className="text-sm text-gray-500">Stars: 120</p>
+                  <p className="text-sm text-gray-500">Commits: {contribution.commits}</p>
+                  <p className="text-sm text-gray-500">Stars: {contribution.stars}</p>
                 </div>
               </div>
             </div>

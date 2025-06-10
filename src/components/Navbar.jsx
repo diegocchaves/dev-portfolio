@@ -15,6 +15,7 @@ const Navbar = () => {
     { label: 'About,', to: "about" },
     { label: 'Skills,', to: "skills" },
     { label: 'Projects ,', to: "projects" },
+      { label: 'Contributions ,', to: "contributions" },
     { label: 'Contact', to: "contact" },
     { label: ']', to: "" },
   ]
@@ -36,7 +37,7 @@ const Navbar = () => {
       </div>
 
       {/* menu */}
-      <nav className='justify-end hidden gap-2 w-80 md:flex'>
+      <nav className='hidden gap-2 md:flex'>
         {links.map((link, index) => (
           <div key={index} >
             <Link to={link.to}

@@ -10,28 +10,28 @@ const Contributions = () => {
       href: "https://github.com/marcelscruz/dev-resources",
       url: "https://devresourc.es/",
       image: MicroActionsBlog,
-      Date: "Mon May 8 2023 ",
-      value: "In Progress",
-      color: "text-yellow-500",
+      Date: "June 6 2025 ",
+      value: "Completed",
+      color: "text-green-500",
       commits: 3,
-      stars: 120,
+      stars: 1129,
     },
     {
       label: "Public APIs",
       href: "https://github.com/marcelscruz/public-apis",
       url: "https://publicapis.dev/",
       image: MicroActionsImage,
-      Date: "Mon May 8 2023 ",
+      Date: "June 8 2025 ",
       value: "In Progress",
       color: "text-yellow-500",
-      contributions: 3,
-      stars: 120,
+      commits: 0,
+      stars: 4888,
     },
   ];
 
   return (
     <div
-      name="projects"
+      name="contributions"
       className="py-20 text-gray-300 bg-black md:py-36 insert-0"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -85,7 +85,7 @@ const Contributions = () => {
                   </a>
 
                   <div className="flex items-center gap-2 mt-2">
-                    <GrStatusGoodSmall className="text-green-500" size={10} />
+                    <GrStatusGoodSmall className={`${contribution.color}`} size={10} />
                     <p className="text-sm text-gray-500">
                       Status: {contribution.value}
                     </p>

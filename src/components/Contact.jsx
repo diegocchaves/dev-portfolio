@@ -17,7 +17,7 @@ const Contatc = () => {
   };
   
   return (
-    <div name='contact' className='flex items-center justify-center p-4 pt-20 bg-black md: md:pb-20 md:pt-40' >
+    <div name='contact' className='flex items-center justify-center p-4 py-20 bg-black md:py-36' >
       <form method='POST'
        action="https://getform.io/f/f437e598-9e82-4608-8df9-dff71cc633c9"
         className='flex flex-col max-w-[600px] w-full'

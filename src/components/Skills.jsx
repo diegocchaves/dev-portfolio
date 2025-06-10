@@ -25,7 +25,7 @@ const Skills = () => {
     { src: Next, alt: "Next.js icon" }
   ];
   return (
-    <div name='skills' className='pt-20 text-gray-300 bg-black md:pt-40'>
+    <div name='skills' className='flex items-center justify-center py-20 text-gray-300 bg-black md:py-36'>
       {/* Contanier */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='flex flex-col items-center '>

@@ -11,7 +11,7 @@ const Home = () => {
             backgroundSize: 'inherit',
             backgroundPosition: 'inherit',
             backgroundRepeat: 'no-repeat',
-        }} name='home' className='z-10 w-full h-full py-20 bg-black bg-opacity-60 md:py-40' >
+        }} name='home' className='z-10 w-full h-full py-20 bg-black bg-opacity-60 md:py-36' >
       {/* Container */}
       <div className='flex items-center justify-center w-full h-full space-y-10'>
       <div className='flex flex-col justify-start px-8 mx-auto max-w-[1000px]'>

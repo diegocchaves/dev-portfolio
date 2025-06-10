@@ -8,7 +8,8 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div>
+    <div className="p-0 mx-0 my-0 overflow-hidden App">
+      {/* Navbar and sections */}
       <Navbar />
       <Home />
       <About />

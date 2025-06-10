@@ -10,11 +10,11 @@ const About = () => {
             </p>
         </div>
         <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-          <div className='text-4xl font-bold sm:text-right' p>
+          <div className='text-3xl font-bold md:text-4xl sm:text-right' p>
             <p>Hi, I'm Diego, nice to meet you.
               Please take a look around.</p>
           </div>
-          <div>
+          <div className='md:text-lg text-sm text-[#8892b0]'>
             <p>I am passionate about building excellent software that improves
               the lives of those around me. While I may not have professional experience working in a business setting yet,
               I am eager to showcase my skills and contribute to real-world projects.

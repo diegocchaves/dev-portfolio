@@ -11,13 +11,13 @@ const Home = () => {
             backgroundSize: 'inherit',
             backgroundPosition: 'inherit',
             backgroundRepeat: 'no-repeat',
-        }} name='home' className='z-10 w-full h-full py-20 bg-black bg-opacity-40 md:py-36' >
+        }} name='home' className='w-full h-full py-20 bg-black bg-opacity-40 md:py-36 ' >
       {/* Container */}
-      <div className='flex items-center justify-center w-full h-full space-y-10'>
-      <div className='flex flex-col justify-start px-8 mx-auto max-w-[1000px]'>
-        <h1 className=' text-4xl font-bold text-white md:text-[11rem] mt-24 mb-28'>Diego</h1>
-        <h1 className=' text-4xl font-bold text-white md:text-[11rem] mb-16'>Carvalho</h1>
-        <span className='block text-[#8892b0] text-lg py-4 w-fit'>I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. <br />
+      <div className='flex md:justify-center md:items-center md:space-y-10'>
+      <div className='flex flex-col px-4 py-16 md:py-0 md:px-8 '>
+        <h1 className=' text-7xl font-bold text-white md:text-[11rem]'>Diego</h1>
+        <h1 className=' text-7xl font-bold text-white md:text-[11rem] mb-2'>Carvalho</h1>
+        <span className='block text-[#8892b0] text-sm md:text-lg py-4 w-fit'>I enjoy creating clean and efficient code that not only looks great,but functions flawlessly. <br />
         My goal is to collaborate with other
           like-minded individuals and businesses
            to create meaningful solutions <br />

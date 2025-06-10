@@ -28,7 +28,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 md:px-6 bg-black text-gray-30 z-10'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-6 bg-black text-gray-30 z-0 '>
       <div className='flex items-center justify-start '>
         <Link to='home' smooth={true} duration={500} className='flex justify-start cursor-pointer'>
           <img src={Logo} alt='logo' className='w-8 h-8' />
@@ -53,8 +53,8 @@ const Navbar = () => {
       </nav>
 
       {/* hamburge */}
-      <div onClick={handleClick} className='z-10 md:hidden'>
-        {!nav ? <FaBars /> : <FaTimes />}
+      <div onClick={handleClick} className='z-10 text-white md:hidden'>
+        {!nav ? <FaBars size={20} /> : <FaTimes size={10} />}
       </div>
 
       {/* mobile menu */}

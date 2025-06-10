@@ -49,21 +49,21 @@ const Contributions = () => {
           <p className="mr-2 whitespace-nowrap">June 2025</p>
           <div className="flex-1 h-[1px] bg-gray-700 rounded-sm"></div>
         </div>
-        <nav className="grid w-full h-full grid-cols-2 md:flex md:flex-row">
+        <nav className="grid w-full h-full grid-cols-2 md:flex md:flex-row md:items-start md:justify-start md:gap-4">
           {contributions.map((contribution, index) => (
             <div
               key={index}
               className="flex items-center justify-start md:py-3 md:px-6 "
             >
-              <div className="flex flex-row items-start justify-start p-4 transition-shadow bg-gray-900 rounded-lg shadow-md ">
-                <div className="flex flex-row items-center w-full h-full p-4 mb-8 md:mb-0">
+              <div className="flex flex-row items-start justify-start p-4 ">
+                <div className="flex flex-row items-center w-full h-full p-2">
                   <div className="flex-1 h-[2px] bg-gray-700 rounded-sm rotate-90"></div>
                   <FaCodePullRequest
                     className="mr-2 text-green-500 whitespace-nowrap"
                     size={35}
                   />
                 </div>
-                <div className="flex flex-col items-start justify-start w-full h-full gap-3 p-4 mb-8 md:mb-0">
+                <div className="flex flex-col items-start justify-start ">
                   <a
                     href={contribution.href}
                     target="_blank"
@@ -82,7 +82,7 @@ const Contributions = () => {
                   </a>
 
                   <div className="flex items-center gap-2 mt-2">
-                    <GrStatusGoodSmall className="text-green-500" size={20} />
+                    <GrStatusGoodSmall className="text-green-500" size={10} />
                     <p className="text-sm text-gray-500">
                       Status: {contribution.value}
                     </p>
@@ -90,17 +90,8 @@ const Contributions = () => {
                   <p className="text-sm text-gray-500">
                     Last updated: {contribution.Date}
                   </p>
-                  <p className="text-sm text-gray-500">Contributions: 5</p>
+                  <p className="text-sm text-gray-500">Contributions: 3</p>
                   <p className="text-sm text-gray-500">Stars: 120</p>
-
-                  {/* <p className="text-xl font-bold">2 repositories</p>
-                  <div className="flex flex-col">
-                    <p className="text-xl font-bold">{contribution.label}</p>
-                    <p className="text-sm text-gray-500">{contribution.Date}</p>
-                    <p className={`text-sm ${contribution.color}`}>
-                      {contribution.value}
-                    </p>
-                  </div> */}
                 </div>
               </div>
             </div>

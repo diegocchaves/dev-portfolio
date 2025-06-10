@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill, BsTwitterX } from 'react-icons/bs'
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaRegEnvelope, FaRegFileAlt } from 'react-icons/fa'
+import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../assets/images/Logo1.svg"
 import { Link } from 'react-scroll'
 
@@ -23,9 +22,9 @@ const Navbar = () => {
   const icons = [
     { icon: <FaLinkedin size={18} />, label: 'Linkedin', href: 'https://www.linkedin.com/in/diego-carve/', color: '[#4267b2]' },
     { icon: <FaGithub size={18} />, label: 'Github', href: 'https://github.com/Diegocchaves', color: '[#333333]' },
-    { icon: <BsTwitterX size={18} />, label: 'twiter/X', href: 'https://twitter.com/diego_carve', color: '[#1da1f2]' },
-    { icon: <HiOutlineMail size={18} />, label: 'Email', href: '/', color: '[#6fc2b0]' },
-    { icon: <BsFillPersonLinesFill size={18} />, label: 'Resume', href: '/', color: '[#565f69]' },
+    { icon: <FaXTwitter size={18} />, label: 'twiter/X', href: 'https://twitter.com/diego_carve', color: '[#1da1f2]' },
+    { icon: <FaRegEnvelope size={18} />, label: 'Email', href: '/', color: '[#6fc2b0]' },
+    { icon: <FaRegFileAlt size={18} />, label: 'Resume', href: '/', color: '[#565f69]' },
   ]
 
   return (
@@ -73,7 +72,7 @@ const Navbar = () => {
       </nav>
 
       {/* social icons */}
-      <nav className='hidden md:flex fixed flex-col top-[35%] gap-4 left-0'>
+      <nav className='hidden md:flex fixed flex-col top-[35%] gap-4 left-0 justify-center z-10'>
         {icons.map((icon, index) => (
           <div key={index} className={`w-[150px] h-[60px] flex justify-between items-center ml-[-96px] hover:ml-[-10px] duration-300 ${icon.color}`}>
             <a

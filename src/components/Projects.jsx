@@ -65,7 +65,7 @@ const Projects = () => {
               key={index}
               className="flex items-center justify-start w-full h-full border border-gray-700 rounded-md md:py-3 md:px-3 "
             >
-              <div className="flex items-center justify-center border border-gray-700 rounded-md w-80 h-80 bg-gray-50">
+              <div className="flex items-center justify-center bg-gray-900 border border-gray-700 rounded-md w-80 h-80">
                 {/* Background Image */}
                 <img
                   src={work.image}

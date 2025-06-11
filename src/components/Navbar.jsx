@@ -36,7 +36,7 @@ const Navbar = () => {
   const icons = [
     { icon: <FaLinkedin size={18} />, label: 'Linkedin', href: 'https://www.linkedin.com/in/diego-carve/'},
     { icon: <FaGithub size={18} />, label: 'Github', href: 'https://github.com/Diegocchaves'},
-    { icon: <FaXTwitter size={18} />, label: 'twiter/X', href: 'https://twitter.com/diego_carve' },
+    { icon: <FaXTwitter size={18} />, label: 'Twitter/X', href: 'https://twitter.com/diego_carve' },
     { icon: <FaRegFileAlt size={18} />, label: 'Resume', href: 'https://drive.google.com/file/d/1qfcAZMTdLYSH-7sobEz7jEOqdmkLLnMB/view?usp=drive_link' },
   ]
 

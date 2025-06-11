@@ -4,9 +4,19 @@ import BeachSpaceImage from "../assets/images/bs-mockup.svg";
 import CuidandoDoMoneyImage from "../assets/images/cm-mockup.svg";
 import MicroActionsImage from "../assets/images/ma-mockup.svg";
 import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
+import Portfolio from "../assets/images/dc-portfolio-mockup.svg"
 
 const Projects = () => {
   const works = [
+     {
+      label: "Diego Carvalho - Portfolio",
+      href: "https://github.com/diegocchaves/dev-portfolio",
+      url: "https://vercel.com/diegocchaves-projects/dev-portfolio-1rt8",
+      image: Portfolio,
+      Date: "Wed Jun 11 2025 ",
+      value: "Completed",
+      color: "text-green-500",
+    },
     {
       label: "Micro Actions Blog",
       href: "https://github.com/diegocchaves/micro-actions-blog",

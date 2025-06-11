@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaRegEnvelope, FaRegFileAlt } from 'react-icons/fa'
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../assets/images/Logo1.svg"
@@ -7,17 +7,31 @@ import { Link } from 'react-scroll'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  useEffect(() => {
+     const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      }
+  }}, [])
+  
+  // If not mobile, show all links
   const links = [
     { label: '[', to: ""},
-    { label: 'Home,', to: "home" },
-    { label: 'About,', to: "about" },
-    { label: 'Skills,', to: "skills" },
-    { label: 'Projects ,', to: "projects" },
-      { label: 'Contributions ,', to: "contributions" },
+    { label: 'Home', to: "home" },
+    { label: 'About', to: "about" },
+    { label: 'Skills', to: "skills" },
+    { label: 'Projects', to: "projects" },
+    { label: 'Contributions', to: "contributions" },
     { label: 'Contact', to: "contact" },
     { label: ']', to: "" },
   ]
+  
+  // Filter out [ and ] on mobile
+   const filteredLinks = isMobile ? links.filter(link => link.label !== '[' && link.label !== ']' ): links;
 
   const icons = [
     { icon: <FaLinkedin size={18} />, label: 'Linkedin', href: 'https://www.linkedin.com/in/diego-carve/', color: '[#4267b2]' },
@@ -59,7 +73,7 @@ const Navbar = () => {
 
       {/* mobile menu */}
       <nav className={!nav ? 'hidden' : ' absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center gap-10'}>
-        {links.map((link, index) => (
+        {filteredLinks.map((link, index) => (
           <Link key={index}
             to={link.to}
             smooth={true}

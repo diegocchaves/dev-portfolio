@@ -17,7 +17,7 @@ const Contatc = () => {
   };
   
   return (
-    <div name='contact' className='flex flex-col items-center justify-center p-4 py-20 text-gray-300 bg-black md:py-36' >
+    <div name='contact' className='flex flex-col items-center justify-center p-4 py-16 text-gray-300 bg-black md:py-36' >
       <div className='flex flex-col text-center md:py-10 '>
           <p className='inline text-lg font-bold md:text-xl'>[ Contact ]</p>
           <p className='py-6 text-[15px] md:text-lg'>//Submit the form below or shoot me an email - diegocchaves21@gmail.com</p>

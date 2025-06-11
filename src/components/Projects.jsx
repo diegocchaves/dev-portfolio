@@ -52,7 +52,7 @@ const Projects = () => {
   };
 
   return (
-    <div name="projects" className="z-0 py-20 text-gray-300 bg-black md:py-36">
+    <div name="projects" className="z-0 py-16 text-gray-300 bg-black md:py-36">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center pb-8 ">
           <p className="inline text-lg font-bold md:text-xl">[ Projects ]</p>

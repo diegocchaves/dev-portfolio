@@ -34,11 +34,10 @@ const Navbar = () => {
    const filteredLinks = isMobile ? links.filter(link => link.label !== '[' && link.label !== ']' ): links;
 
   const icons = [
-    { icon: <FaLinkedin size={18} />, label: 'Linkedin', href: 'https://www.linkedin.com/in/diego-carve/', color: '[#4267b2]' },
-    { icon: <FaGithub size={18} />, label: 'Github', href: 'https://github.com/Diegocchaves', color: '[#333333]' },
-    { icon: <FaXTwitter size={18} />, label: 'twiter/X', href: 'https://twitter.com/diego_carve', color: '[#1da1f2]' },
-    { icon: <FaRegEnvelope size={18} />, label: 'Email', href: '/', color: '[#6fc2b0]' },
-    { icon: <FaRegFileAlt size={18} />, label: 'Resume', href: '/', color: '[#565f69]' },
+    { icon: <FaLinkedin size={18} />, label: 'Linkedin', href: 'https://www.linkedin.com/in/diego-carve/'},
+    { icon: <FaGithub size={18} />, label: 'Github', href: 'https://github.com/Diegocchaves'},
+    { icon: <FaXTwitter size={18} />, label: 'twiter/X', href: 'https://twitter.com/diego_carve' },
+    { icon: <FaRegFileAlt size={18} />, label: 'Resume', href: 'https://drive.google.com/file/d/1qfcAZMTdLYSH-7sobEz7jEOqdmkLLnMB/view?usp=drive_link' },
   ]
 
   return (
@@ -93,8 +92,8 @@ const Navbar = () => {
               href={icon.href}
               target='_blank'
               rel='noopener noreferrer'
-              className='flex items-center justify-around w-full gap-4 px-4 text-gray-300'>
-              <p className={`${icon.color}`}>{icon.label}</p>
+              className='flex items-center justify-around w-full gap-4 text-gray-300'>
+              <p className='flex flex-col items-center justify-center'>{icon.label}</p>
               {icon.icon}
             </a>
           </div>

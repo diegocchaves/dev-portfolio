@@ -43,7 +43,7 @@ const Skills = () => {
   return (
     <div name='skills' className='flex items-center justify-center py-20 text-gray-300 bg-black md:py-36'>
       {/* Contanier */}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+      <div className='max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full'>
         <div className='flex flex-col items-center '>
           <p className='inline text-lg font-bold md:text-xl'>[ Skills ]</p>
           <p className='py-4 text-[15px] md:text-lg'>// These are the technologies I've working with</p>

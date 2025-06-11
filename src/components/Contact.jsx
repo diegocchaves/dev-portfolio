@@ -26,7 +26,7 @@ const Contatc = () => {
         >
         <div className='flex flex-col items-center mb-8'>
           <p className='inline text-lg font-bold text-gray-300 md:text-xl'>[ Contact ]</p>
-          <p className='py-4 text-gray-300'>//Submit the form below or shoot me an email - diegocchaves21@gmail.com</p>
+          <p className='py-4 text-gray-300 text-[15px] md:text-lg text-center '>//Submit the form below or shoot me an email - diegocchaves21@gmail.com</p>
         </div>
         <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' value={form.name} onChange={handleChange}  />
         <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' value={form.email} onChange={handleChange} />

@@ -35,31 +35,29 @@ const Contributions = () => {
       className="py-20 text-gray-300 bg-black md:py-36 insert-0"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center justify-center w-full p-4 text-center">
           <p className="inline text-lg font-bold md:text-xl">
             [ Contributions ]
           </p>
-          <p className="py-4">// Take a look on my recent contributions </p>
-        </div>
-        {/* Container */}
-        <div className="flex flex-col items-start justify-start w-full h-full gap-4 p-4 mb-8 md:mb-0">
-          <p className="text-sm text-gray-500">
+          <p className="py-5 text-[15px] md:text-lg">// Take a look on my recent contributions </p>
+          <p className="text-sm text-gray-500 md:text-base">
             Contributions are open source projects that I have contributed to,
             including pull requests, issues, and discussions. They showcase my
             involvement in the developer community.
           </p>
         </div>
-        <div className="flex flex-row items-center w-full gap-1 p-4 mb-8 md:mb-0">
+        {/* Container */}
+        <div className="flex flex-row items-center w-full gap-1 p-4 mb-2 md:mb-0">
           <p className="mr-2 whitespace-nowrap">June 2025</p>
           <div className="flex-1 h-[1px] bg-gray-700 rounded-sm"></div>
         </div>
-        <nav className="grid items-center justify-center w-full h-full grid-cols-2 gap-4 md:flex md:gap-8">
+        <nav className="flex flex-col items-center justify-center w-full h-full gap-4 md:grid md:grid-cols-2 md:gap-8">
           {contributions.map((contribution, index) => (
             <div
               key={index}
-              className="flex items-center transition-colors duration-300 border border-gray-700 rounded-lg md:py-5 md:px-5"
+              className="flex items-center w-full h-full transition-colors duration-300 border border-gray-700 rounded-lg md:py-5 md:px-5"
             >
-              <div className="flex flex-row w-full h-full gap-2">
+              <div className="flex flex-row w-full h-full gap-2 p-4">
                 <div className="flex flex-row items-center p-2 w-fit h-fit">
                   <FaCodePullRequest
                     className="mr-2 text-green-500 whitespace-nowrap"

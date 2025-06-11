@@ -52,25 +52,25 @@ const Projects = () => {
   };
 
   return (
-    <div name="projects" className="py-20 text-gray-300 bg-black md:py-36 insert-0">
+    <div name="projects" className="z-0 py-20 text-gray-300 bg-black md:py-36">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center pb-8 ">
           <p className="inline text-lg font-bold md:text-xl">[ Projects ]</p>
           <p className="py-4">// Check out some of my recent projects </p>
         </div>
         {/* Container */}
-        <nav className="grid w-full h-full grid-cols-2 gap-4 p-4 md:flex md:flex-col">
+        <nav className="grid w-full h-full grid-cols-1 gap-4 md:p-4 md:flex md:flex-col">
           {works.slice(0, visibleCount).map((work, index) => (
             <div
               key={index}
-              className="flex items-center justify-start w-full h-full border border-gray-700 rounded-md md:py-3 md:px-3 "
+              className="relative flex items-center justify-start w-full h-full py-6 border border-gray-700 rounded-md md:py-3 md:px-3 "
             >
-              <div className="flex items-center justify-center bg-gray-900 border border-gray-700 rounded-md w-80 h-80">
+              <div className="absolute items-center justify-center w-full h-full p-2 bg-gray-900 border border-gray-700 rounded-md md:relative md:p-0 insert-0 md:flex md:w-80 md:h-80">
                 {/* Background Image */}
                 <img
                   src={work.image}
                   alt={work.label}
-                  className="flex items-center justify-center w-40 h-40 p-2 m-2 transition duration-300 ease-in-out rounded md:w-full md:h-full grayscale hover:grayscale-0"
+                  className="items-center justify-center w-full h-full transition duration-300 ease-in-out rounded opacity-3 md:opacity-100 md:p-2 md:m-2 md:flex grayscale hover:grayscale-0"
                   style={{ objectFit: "cover" }}
                   loading="lazy"
                   onError={(e) => {
@@ -79,16 +79,16 @@ const Projects = () => {
                   }}
                 />
               </div>
-              <div className="flex flex-col mx-10 md:grid md:grid-cols-1 md:gap-4 md:items-center md:justify-center">
+              <div className="z-0 flex flex-col mx-10 md:grid md:grid-cols-1 md:gap-4 md:items-center md:justify-center bg-opacity-20">
                 <div className="flex flex-col justify-start gap-5 ">
-                    <p className="text-xl font-bold">{work.label}</p>
+                    <p className="text-lg font-bold md:text-xl">{work.label}</p>
                   <div className="flex flex-col">
-                    <span className="mt-4 font-medium text-gray-500">
+                    <span className="mt-4 text-sm font-medium text-gray-500 md:text-base ">
                       Visit
                     </span>
                     <a
                       href={work.url}
-                      className="text-base font-medium text-gray-100 transition hover:text-[#1da1f2]"
+                      className="md:text-base text-sm font-medium text-gray-100 transition md:hover:text-[#1da1f2]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -97,10 +97,10 @@ const Projects = () => {
                     
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-medium text-gray-500">Source</span>
+                    <span className="text-sm font-medium text-gray-500 md:text-base ">Source</span>
                     <a
                       href={work.href}
-                      className="text-base font-medium text-gray-100 transition hover:text-[#1da1f2]"
+                      className="md:text-base text-sm font-medium text-gray-100 transition md:hover:text-[#1da1f2]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -110,21 +110,21 @@ const Projects = () => {
                   </div>
                     <div className="flex flex-row items-center justify-start gap-14 ">
                       <div className="flex flex-col gap-1 text-gray-100">
-                        <span className="font-medium text-gray-500">
+                        <span className="text-sm font-medium text-gray-500 md:text-base ">
                           Status:
                         </span>
                         <div className="flex flex-row items-center gap-2">
                           <span className={`flex items-center ${work.color}`}>
-                            <GrStatusGoodSmall size={12} />
+                            <GrStatusGoodSmall size={10} />
                           </span>
-                          <span className="text-sm ">{work.value}</span>
+                          <span className="text-sm md:text-base">{work.value}</span>
                         </div>
                       </div>
                       <div className="flex flex-col gap-1 text-gray-100">
-                        <span className="font-medium text-gray-500">
+                        <span className="text-sm font-medium text-gray-500 md:text-base ">
                           Created:
                         </span>
-                        <span className="text-sm ">{work.Date}</span>
+                        <span className="text-sm md:text-base">{work.Date}</span>
                       </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ const Projects = () => {
           <div className="flex items-center justify-center mt-4">
             <button
               onClick={handleLoadMore}
-              className="px-4 py-2 text-sm text-white underline transition-colors duration-300 underline-offset-4 hover:text-blue-500"
+              className="px-4 py-2 text-sm text-white underline transition-colors duration-300 underline-offset-4 md:hover:text-blue-500"
             >
               Load More
             </button>

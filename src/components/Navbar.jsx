@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   const links = [
-    { label: '[', to: "" },
+    { label: '[', to: ""},
     { label: 'Home,', to: "home" },
     { label: 'About,', to: "about" },
     { label: 'Skills,', to: "skills" },
@@ -28,7 +28,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-6 bg-black text-gray-30 z-0 '>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-6 bg-black text-gray-30 z-10 '>
       <div className='flex items-center justify-start '>
         <Link to='home' smooth={true} duration={500} className='flex justify-start cursor-pointer'>
           <img src={Logo} alt='logo' className='w-8 h-8' />
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
 
       {/* mobile menu */}
-      <nav className={!nav ? 'hidden' : ' absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center gap-16'}>
+      <nav className={!nav ? 'hidden' : ' absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center gap-10'}>
         {links.map((link, index) => (
           <Link key={index}
             to={link.to}

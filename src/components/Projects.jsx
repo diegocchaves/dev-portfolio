@@ -10,8 +10,8 @@ const Projects = () => {
   const works = [
      {
       label: "Diego Carvalho - Portfolio",
-      href: "https://github.com/diegocchaves/dev-portfolio",
       url: "https://dev-portfolio-1rt8.vercel.app/",
+      href: "https://github.com/diegocchaves/dev-portfolio",
       image: Portfolio,
       Date: "Wed Jun 11 2025 ",
       value: "Completed",
@@ -19,8 +19,8 @@ const Projects = () => {
     },
     {
       label: "Micro Actions Blog",
-      href: "https://github.com/diegocchaves/micro-actions-blog",
       url: "https://www.microactions.blog",
+      href: "https://github.com/diegocchaves/micro-actions-blog",
       image: MicroActionsBlog,
       Date: "Mon May 8 2023 ",
       value: "In Progress",
@@ -28,8 +28,8 @@ const Projects = () => {
     },
     {
       label: "Micro Actions",
-      href: "https://github.com/diegocchaves/micro-actions",
       url: "https://www.microactions.co",
+      href: "https://github.com/diegocchaves/micro-actions",
       image: MicroActionsImage,
       Date: "Mon May 8 2023 ",
       value: "In Progress",
@@ -37,8 +37,8 @@ const Projects = () => {
     },
     {
       label: "Cuidando do Money",
-      href: "https://github.com/diegocchaves/cuidando-do-money",
       url: "https://cuidandodomoney.vercel.app",
+      href: "https://github.com/diegocchaves/cuidando-do-money",
       image: CuidandoDoMoneyImage,
       Date: "Mon May 8 2023 ",
       value: "Completed",
@@ -46,8 +46,8 @@ const Projects = () => {
     },
     {
       label: "Beach Space",
-      href: "https://github.com/diegocchaves/beach-space",
       url: "https://beach-space.vercel.app/login",
+      href: "https://github.com/diegocchaves/beach-space",
       image: BeachSpaceImage,
       Date: "Mon May 8 2023 ",
       value: "Completed",

@@ -58,11 +58,6 @@
   fill: #16a34a !important;
 }
 
-.react-calendar-heatmap text {
-  font-size: 10px;
-  fill: #9ca3af;
-}
-
-.react-calendar-heatmap .day {
-  shape-rendering: geometricPrecision;
+.react-calendar-heatmap .react-calendar-heatmap-weekday-labels {
+  transform: translateX(6px); /* Adjust this value for more/less gap */
 }

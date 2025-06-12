@@ -5,6 +5,7 @@ import MicroActionsImage from "../assets/images/ma-mockup.svg";
 import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
+import { useEffect, useState } from "react";
 
 const Contributions = () => {
   //Generate heatmap data for the last 100 days
@@ -42,6 +43,21 @@ const Contributions = () => {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Set initial state
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       name="contributions"
@@ -62,8 +78,29 @@ const Contributions = () => {
           </p>
 
           {/* HeatMap */}
-          <div className="my-8 min-w-[900px] overflow-x-auto ">
-            <div className="">
+          {isMobile ? (
+            <div className="relative pt-8 w-80 ">
+              <CalendarHeatmap
+                startDate={subDays(today, 200)}
+                endDate={today}
+                values={heatmapData}
+                classForValue={(value) => {
+                  if (!value || !value.count) return "color-empty";
+                  if (value.count >= 5) return "color-scale-5";
+                  if (value.count >= 4) return "color-scale-4";
+                  if (value.count >= 3) return "color-scale-3";
+                  if (value.count >= 2) return "color-scale-2";
+                  if (value.count >= 1) return "color-scale-1";
+                  return "color-empty";
+                }}
+                tooltipDataAttrs={(value) => ({
+                  "data-tip": `${value.date}: ${value.count} commits`,
+                })}
+                showWeekdayLabels={true}
+              />
+            </div>
+          ) : (
+            <div className="md:mt-8 md:mb-0 my-6 md:w-[900px] ">
               <CalendarHeatmap
                 startDate={subDays(today, 365)}
                 endDate={today}
@@ -83,7 +120,7 @@ const Contributions = () => {
                 showWeekdayLabels={true}
               />
             </div>
-          </div>
+          )}
         </div>
         {/* Container */}
         <div className="flex flex-row items-center w-full gap-1 p-4 mb-2 md:mb-0">

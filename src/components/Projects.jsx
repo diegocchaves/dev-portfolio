@@ -11,7 +11,7 @@ const Projects = () => {
      {
       label: "Diego Carvalho - Portfolio",
       href: "https://github.com/diegocchaves/dev-portfolio",
-      url: "https://vercel.com/diegocchaves-projects/dev-portfolio-1rt8",
+      url: "https://dev-portfolio-1rt8.vercel.app/",
       image: Portfolio,
       Date: "Wed Jun 11 2025 ",
       value: "Completed",

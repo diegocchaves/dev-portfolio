@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaRegEnvelope, FaRegFileAlt } from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaRegFileAlt } from 'react-icons/fa'
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../assets/images/Logo1.svg"
 import { Link } from 'react-scroll'

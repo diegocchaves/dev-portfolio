@@ -46,7 +46,7 @@ const Skills = () => {
       <div className='max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full'>
         <div className='flex flex-col items-center '>
           <p className='inline text-lg font-bold md:text-xl'>[ Skills ]</p>
-          <p className='py-4 text-[15px] md:text-lg'>// These are the technologies I've working with</p>
+          <p className='py-4 text-[15px] md:text-lg'>{`// These are the technologies I've working with`}</p>
         </div>
         {isMobile ? (
           <div className='grid grid-cols-3 gap-8 mt-6 text-center'>

@@ -66,7 +66,7 @@ const Projects = () => {
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center pb-8 ">
           <p className="inline text-lg font-bold md:text-xl">[ Projects ]</p>
-          <p className="py-4">// Check out some of my recent projects </p>
+          <p className="py-4">{`//Check out some of my recent projects `}</p>
         </div>
         {/* Container */}
         <nav className="grid w-full h-full grid-cols-1 gap-4 md:p-4 md:flex md:flex-col">
@@ -85,7 +85,7 @@ const Projects = () => {
                   loading="lazy"
                   onError={(e) => {
                     e.target.onerror = null; // Prevents infinite loop
-                    e.target.src = "https://via.placeholder.com/150"; // Fallback image
+                    e.target.src = "https://via.placeholder.com/150";   {/* Fallback image */}
                   }}
                 />
               </div>

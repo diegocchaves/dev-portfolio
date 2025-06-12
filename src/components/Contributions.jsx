@@ -1,9 +1,22 @@
+import { subDays } from "date-fns"; // For generating dynamic dates
 import { GrStatusGoodSmall } from "react-icons/gr";
 import { FaCodePullRequest } from "react-icons/fa6";
 import MicroActionsImage from "../assets/images/ma-mockup.svg";
 import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
+import CalendarHeatmap from "react-calendar-heatmap";
+import "react-calendar-heatmap/dist/styles.css";
 
 const Contributions = () => {
+  //Generate heatmap data for the last 100 days
+  const today = new Date();
+  const heatmapData = Array.from({ length: 300 }, (_, i) => {
+    const date = subDays(today, i);
+    return {
+      date: date.toISOString().split("T")[0],
+      count: Math.floor(Math.random() * 5),
+    };
+  });
+
   const contributions = [
     {
       label: "Dev Resources",
@@ -39,12 +52,38 @@ const Contributions = () => {
           <p className="inline text-lg font-bold md:text-xl">
             [ Contributions ]
           </p>
-          <p className="py-5 text-[15px] md:text-lg">// Take a look on my recent contributions </p>
+          <p className="py-5 text-[15px] md:text-lg">
+            {"// Take a look on my recent contributions"}
+          </p>
           <p className="text-sm text-gray-500 md:text-base">
             Contributions are open source projects that I have contributed to,
             including pull requests, issues, and discussions. They showcase my
             involvement in the developer community.
           </p>
+
+          {/* HeatMap */}
+          <div className="my-8 min-w-[900px] overflow-x-auto ">
+            <div className="">
+              <CalendarHeatmap
+                startDate={subDays(today, 365)}
+                endDate={today}
+                values={heatmapData}
+                classForValue={(value) => {
+                  if (!value || !value.count) return "color-empty";
+                  if (value.count >= 5) return "color-scale-5";
+                  if (value.count >= 4) return "color-scale-4";
+                  if (value.count >= 3) return "color-scale-3";
+                  if (value.count >= 2) return "color-scale-2";
+                  if (value.count >= 1) return "color-scale-1";
+                  return "color-empty";
+                }}
+                tooltipDataAttrs={(value) => ({
+                  "data-tip": `${value.date}: ${value.count} commits`,
+                })}
+                showWeekdayLabels={true}
+              />
+            </div>
+          </div>
         </div>
         {/* Container */}
         <div className="flex flex-row items-center w-full gap-1 p-4 mb-2 md:mb-0">
@@ -83,7 +122,10 @@ const Contributions = () => {
                   </a>
 
                   <div className="flex items-center gap-2 mt-2">
-                    <GrStatusGoodSmall className={`${contribution.color}`} size={10} />
+                    <GrStatusGoodSmall
+                      className={`${contribution.color}`}
+                      size={10}
+                    />
                     <p className="text-sm text-gray-500">
                       Status: {contribution.value}
                     </p>
@@ -91,8 +133,12 @@ const Contributions = () => {
                   <p className="text-sm text-gray-500">
                     Last updated: {contribution.Date}
                   </p>
-                  <p className="text-sm text-gray-500">Commits: {contribution.commits}</p>
-                  <p className="text-sm text-gray-500">Stars: {contribution.stars}</p>
+                  <p className="text-sm text-gray-500">
+                    Commits: {contribution.commits}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Stars: {contribution.stars}
+                  </p>
                 </div>
               </div>
             </div>

@@ -129,7 +129,7 @@ const Navbar = () => {
         onClick={() => {
           setTheme(theme === "dark" ? "light" : "dark");
         }}
-        className="px-2 py-1 ml-4 text-[#298E9E] rounded dark:text-white "
+        className="px-2 py-1 ml-4 text-[#298E9E] rounded dark:text-white md:hidden "
       >
         <span className="flex items-center gap-2">
           {theme === "dark" ? (

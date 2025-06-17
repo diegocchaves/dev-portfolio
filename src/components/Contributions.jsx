@@ -32,14 +32,16 @@ const Contributions = () => {
   return (
     <div
       name="contributions"
-      className="py-16 text-gray-300 bg-black md:py-36 insert-0"
+      className="py-16 text-gray-800 bg-white dark:text-gray-300 dark:bg-black md:py-36 insert-0"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center w-full p-4 text-center">
           <p className="inline text-lg font-bold md:text-xl">
             [ Contributions ]
           </p>
-          <p className="py-5 text-[15px] md:text-lg">// Take a look on my recent contributions </p>
+          <p className="py-5 text-[15px] md:text-lg">
+            // Take a look on my recent contributions{" "}
+          </p>
           <p className="text-sm text-gray-500 md:text-base">
             Contributions are open source projects that I have contributed to,
             including pull requests, issues, and discussions. They showcase my
@@ -83,7 +85,10 @@ const Contributions = () => {
                   </a>
 
                   <div className="flex items-center gap-2 mt-2">
-                    <GrStatusGoodSmall className={`${contribution.color}`} size={10} />
+                    <GrStatusGoodSmall
+                      className={`${contribution.color}`}
+                      size={10}
+                    />
                     <p className="text-sm text-gray-500">
                       Status: {contribution.value}
                     </p>
@@ -91,8 +96,12 @@ const Contributions = () => {
                   <p className="text-sm text-gray-500">
                     Last updated: {contribution.Date}
                   </p>
-                  <p className="text-sm text-gray-500">Commits: {contribution.commits}</p>
-                  <p className="text-sm text-gray-500">Stars: {contribution.stars}</p>
+                  <p className="text-sm text-gray-500">
+                    Commits: {contribution.commits}
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Stars: {contribution.stars}
+                  </p>
                 </div>
               </div>
             </div>

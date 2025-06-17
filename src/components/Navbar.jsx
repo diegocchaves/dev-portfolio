@@ -66,8 +66,19 @@ const Navbar = () => {
     },
   ];
 
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-black text-gray-30 z-10 ">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-white dark:bg-black text-gray-30 z-10 ">
       <div className="flex items-center justify-start ">
         <Link
           to="home"
@@ -87,7 +98,7 @@ const Navbar = () => {
               to={link.to}
               smooth={true}
               duration={500}
-              className="cursor-pointer text-white text-sm transition hover:text-[#a4cfea] font-extralight "
+              className="cursor-pointer text-black dark:text-white text-sm transition hover:text-[#a4cfea] font-extralight "
               activeClass="active-link"
               spy={true}
             >
@@ -95,10 +106,22 @@ const Navbar = () => {
             </Link>
           </div>
         ))}
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={() => {
+            setTheme(theme === "dark" ? "light" : "dark");
+          }}
+          className="px-2 py-1 ml-4 text-black bg-gray-200 rounded dark:bg-slate-800 dark:text-white "
+        >
+          {theme === "dark" ? "Light Mode" : "Dark Mode"}
+        </button>
       </nav>
 
       {/* hamburge */}
-      <div onClick={handleClick} className="z-10 text-white md:hidden">
+      <div
+        onClick={handleClick}
+        className="z-10 text-black dark:text-white md:hidden"
+      >
         {!nav ? <FaBars size={20} /> : <FaTimes size={10} />}
       </div>
 
@@ -107,7 +130,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : " absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center gap-10"
+            : " absolute top-0 left-0 w-full h-screenbg-white dark:bg-black flex flex-col justify-center items-center gap-10"
         }
       >
         {filteredLinks.map((link, index) => (
@@ -117,7 +140,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             onClick={() => setNav(false)}
-            className="items-center justify-center text-xl text-white"
+            className="items-center justify-center text-xl text-black dark:text-white"
           >
             <p>{link.label}</p>
           </Link>
@@ -135,7 +158,7 @@ const Navbar = () => {
               href={icon.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-around w-full gap-4 text-gray-300"
+              className="flex items-center justify-around w-full gap-4 text-gray-800 dark:text-gray-300"
             >
               <p className="flex flex-col items-center justify-center">
                 {icon.label}

@@ -38,7 +38,7 @@ const Home = () => {
             duration={500}
             className="cursor-pointer"
           >
-            <button className="flex items-center px-6 py-3 my-5 text-black bg-gray-100 border-2 border-gray-700 rounded-md dark:text-white dark:bg-gray-900 group hover:bg-gray-900 hover:border-gray-50 hover: dark:border-gray-700 hover:text-white">
+            <button className="flex items-center px-6 py-3 my-5 text-black bg-blue-200 border border-gray-700 rounded-md shadow-md dark:text-white dark:bg-gray-900 group hover:bg-gray-900 hover:border-gray-50 hover: dark:border-gray-700 hover:text-white shadow-slate-400">
               View Work
               <span className="duration-300 group-hover:rotate-90">
                 <HiArrowNarrowRight className="ml-3" />

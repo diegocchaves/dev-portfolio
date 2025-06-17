@@ -42,7 +42,7 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="flex items-center justify-center py-16 text-gray-800 bg-white dark:text-gray-300 dark:bg-black md:py-36"
+      className="flex items-center justify-center py-16 text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-black md:py-36"
     >
       {/* Contanier */}
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full">

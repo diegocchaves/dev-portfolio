@@ -78,7 +78,7 @@ const Navbar = () => {
   }, [theme]);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-white dark:bg-black text-gray-30 z-10 ">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-gray-100 dark:bg-black text-gray-30 z-10 ">
       <div className="flex items-center justify-start ">
         <Link
           to="home"
@@ -98,7 +98,8 @@ const Navbar = () => {
               to={link.to}
               smooth={true}
               duration={500}
-              className="cursor-pointer text-black dark:text-white text-sm transition hover:text-[#a4cfea] font-extralight "
+              className="cursor-pointer text-black dark:text-white text-sm transition hover:text-blue-600 dark:hover:text-[#a4cfea]
+             "
               activeClass="active-link"
               spy={true}
             >
@@ -130,7 +131,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : " absolute top-0 left-0 w-full h-screenbg-white dark:bg-black flex flex-col justify-center items-center gap-10"
+            : " absolute top-0 left-0 w-full h-screenbg-gray-50 dark:bg-black flex flex-col justify-center items-center gap-10"
         }
       >
         {filteredLinks.map((link, index) => (

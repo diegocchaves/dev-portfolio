@@ -64,7 +64,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="z-0 py-16 text-gray-800 bg-white dark:text-gray-300 dark:bg-black md:py-36"
+      className="z-0 py-16 text-gray-800 bg-gray-50 dark:text-gray-300 dark:bg-black md:py-36"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center pb-8 ">
@@ -78,7 +78,7 @@ const Projects = () => {
               key={index}
               className="relative flex items-center justify-start w-full h-full py-6 border border-gray-700 rounded-md md:py-3 md:px-3 "
             >
-              <div className="absolute items-center justify-center w-full h-full border border-gray-700 rounded-md p-2bg-white dark:bg-gray-900 md:relative md:p-0 insert-0 md:flex md:w-80 md:h-80">
+              <div className="absolute items-center justify-center w-full h-full border border-gray-700 rounded-md p-2bg-gray-50 dark:bg-gray-900 md:relative md:p-0 insert-0 md:flex md:w-80 md:h-80">
                 {/* Background Image */}
                 <img
                   src={work.image}

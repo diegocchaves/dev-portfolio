@@ -32,7 +32,7 @@ const Contributions = () => {
   return (
     <div
       name="contributions"
-      className="py-16 text-gray-800 bg-white dark:text-gray-300 dark:bg-black md:py-36 insert-0"
+      className="py-16 text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-black md:py-36 insert-0"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center w-full p-4 text-center">

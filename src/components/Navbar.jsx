@@ -3,8 +3,9 @@ import {
   FaBars,
   FaTimes,
   FaGithub,
+  FaEnvelope,
   FaLinkedin,
-  FaRegFileAlt,
+  FaFileAlt,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
@@ -57,11 +58,11 @@ const Navbar = () => {
     },
     {
       icon: <FaXTwitter size={18} />,
-      label: "Twitter/X",
+      label: "X",
       href: "https://twitter.com/diego_carve",
     },
     {
-      icon: <FaRegFileAlt size={18} />,
+      icon: <FaFileAlt size={18} />,
       label: "Resume",
       href: "https://drive.google.com/file/d/1qfcAZMTdLYSH-7sobEz7jEOqdmkLLnMB/view?usp=drive_link",
     },
@@ -169,17 +170,17 @@ const Navbar = () => {
       </nav>
 
       {/* social icons */}
-      <nav className="hidden md:flex fixed flex-col top-[35%] gap-4 left-0 justify-center z-10">
+      <nav className="hidden md:flex fixed flex-col top-[35%] z-10">
         {icons.map((icon, index) => (
           <div
             key={index}
-            className={`w-[150px] h-[60px] flex justify-between items-center ml-[-96px] hover:ml-[-10px] duration-300 ${icon.color}`}
+            className={`w-[110px] h-[60px] flex items-center ml-[-96px] hover:ml-[-10px] duration-300 ${icon.color}`}
           >
             <a
               href={icon.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-around w-full gap-4 text-gray-800 dark:text-gray-300"
+              className="flex justify-between w-full text-gray-800 dark:text-gray-300"
             >
               <p className="flex flex-col items-center justify-center">
                 {icon.label}

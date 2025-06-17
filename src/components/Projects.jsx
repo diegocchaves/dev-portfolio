@@ -101,7 +101,7 @@ const Projects = () => {
                     </span>
                     <a
                       href={work.url}
-                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#1da1f2]"
+                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#1da1f2] hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -114,7 +114,7 @@ const Projects = () => {
                     </span>
                     <a
                       href={work.href}
-                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#1da1f2]"
+                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#1da1f2] hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -57,7 +57,7 @@ const Contributions = () => {
           {contributions.map((contribution, index) => (
             <div
               key={index}
-              className="flex items-center w-full h-full transition-colors duration-300 border border-gray-700 rounded-lg md:py-5 md:px-5"
+              className="flex items-center w-full h-full transition-colors duration-300 border border-gray-700 rounded-lg bg-slate-50 dark:bg-transparent md:py-5 md:px-5"
             >
               <div className="flex flex-row w-full h-full gap-2 p-4">
                 <div className="flex flex-row items-center p-2 w-fit h-fit">

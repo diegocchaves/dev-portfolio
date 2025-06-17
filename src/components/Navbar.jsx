@@ -4,10 +4,10 @@ import {
   FaTimes,
   FaGithub,
   FaLinkedin,
-  FaRegEnvelope,
   FaRegFileAlt,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import Logo from "../assets/images/Logo1.svg";
 import { Link } from "react-scroll";
 
@@ -114,7 +114,9 @@ const Navbar = () => {
           }}
           className="px-2 py-1 ml-4 text-black bg-gray-200 rounded dark:bg-slate-800 dark:text-white "
         >
-          {theme === "dark" ? "Light Mode" : "Dark Mode"}
+          <span className="flex items-center gap-2">
+            {theme === "dark" ? <MdOutlineLightMode /> : <MdDarkMode />}
+          </span>
         </button>
       </nav>
 

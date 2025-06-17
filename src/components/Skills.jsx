@@ -28,16 +28,16 @@ const Skills = () => {
   }, []);
 
   const skills = [
-    { src: HTMLImg, alt: "HTML icon" },
-    { src: CSSImg, alt: "CSS icon" },
-    { src: JavaScriptImg, alt: "JavaScript icon" },
-    { src: ReactImg, alt: "React icon" },
-    { src: NodeImg, alt: "Node.js icon" },
-    { src: MongoImg, alt: "MongoDB icon" },
-    { src: TailwinImg, alt: "Tailwind CSS icon" },
-    { src: GitHubImg, alt: "GitHub icon" },
-    { src: TypeScriptImg, alt: "TypeScript icon" },
-    { src: NextImg, alt: "Next.js icon" },
+    { src: HTMLImg, alt: "HTML" },
+    { src: CSSImg, alt: "CSS" },
+    { src: JavaScriptImg, alt: "JavaScript" },
+    { src: ReactImg, alt: "React" },
+    { src: NodeImg, alt: "Node.js" },
+    { src: MongoImg, alt: "MongoDB" },
+    { src: TailwinImg, alt: "Tailwind CSS" },
+    { src: GitHubImg, alt: "GitHub" },
+    { src: TypeScriptImg, alt: "TypeScript" },
+    { src: NextImg, alt: "Next.js" },
   ];
   return (
     <div
@@ -66,14 +66,23 @@ const Skills = () => {
           </div>
         ) : (
           <Marquee
-            className="w-full h-full mt-32"
+            className="w-full h-full mt-20"
             play={true}
             speed={50}
             gradient={false}
           >
-            <div className="flex flex-row w-full space-x-8 text-center">
+            <div className="flex flex-row w-full space-x-8 text-center ">
               {skills.map((skill, index) => (
-                <div key={index}>
+                <div
+                  key={index}
+                  className={`p-4 bg-gray-900 rounded-lg dark:bg-transparent${
+                    index === 0
+                      ? " ml-8"
+                      : index === skills.length - 1
+                      ? " mr-8"
+                      : ""
+                  }`}
+                >
                   <img
                     className={`w-28 md:w-40 mx-8 my-4 ${
                       skill.className || ""
@@ -81,7 +90,7 @@ const Skills = () => {
                     src={skill.src}
                     alt={skill.alt}
                   />
-                  <p>{skill.alt}</p>
+                  <p className="text-gray-300">{skill.alt}</p>
                 </div>
               ))}
             </div>

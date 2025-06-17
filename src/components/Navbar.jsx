@@ -125,6 +125,20 @@ const Navbar = () => {
       </nav>
 
       {/* hamburge */}
+      <button
+        onClick={() => {
+          setTheme(theme === "dark" ? "light" : "dark");
+        }}
+        className="px-2 py-1 ml-4 text-[#298E9E] rounded dark:text-white "
+      >
+        <span className="flex items-center gap-2">
+          {theme === "dark" ? (
+            <MdOutlineLightMode size={20} />
+          ) : (
+            <MdDarkMode size={20} />
+          )}
+        </span>
+      </button>
       <div
         onClick={handleClick}
         className="z-10 text-[#298E9E] dark:text-white md:hidden"
@@ -137,7 +151,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : " absolute top-0 left-0 w-full h-screenbg-gray-50 dark:bg-black flex flex-col justify-center items-center gap-10"
+            : " absolute top-0 left-0 w-full h-screen bg-gray-50 dark:bg-black flex flex-col justify-center items-center gap-10"
         }
       >
         {filteredLinks.map((link, index) => (

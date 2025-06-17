@@ -32,7 +32,7 @@ const Contributions = () => {
   return (
     <div
       name="contributions"
-      className="py-16 text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-black md:py-36 insert-0"
+      className="py-16 text-[#002230] bg-[#E9F2F4] dark:text-gray-300 dark:bg-black md:py-36 insert-0"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center w-full p-4 text-center">
@@ -57,12 +57,12 @@ const Contributions = () => {
           {contributions.map((contribution, index) => (
             <div
               key={index}
-              className="flex items-center w-full h-full transition-colors duration-300 border border-gray-700 rounded-lg bg-slate-50 dark:bg-transparent md:py-5 md:px-5"
+              className="flex items-center w-full h-full transition-colors duration-300 bg-white border border-gray-700 rounded-lg dark:bg-transparent md:py-5 md:px-5"
             >
               <div className="flex flex-row w-full h-full gap-2 p-4">
                 <div className="flex flex-row items-center p-2 w-fit h-fit">
                   <FaCodePullRequest
-                    className="mr-2 text-green-500 whitespace-nowrap"
+                    className="mr-2 text-[#298E9E] dark:text-green-500 whitespace-nowrap"
                     size={35}
                   />
                 </div>
@@ -71,7 +71,7 @@ const Contributions = () => {
                     href={contribution.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-bold text-blue-500 hover:underline"
+                    className="text-lg font-bold text-[#002230] dark:text-white dark:hover:text-green-500 hover:underline"
                   >
                     {contribution.label}
                   </a>
@@ -79,7 +79,7 @@ const Contributions = () => {
                     href={contribution.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-gray-500 hover:underline"
+                    className="text-sm text-gray-500 hover:underline dark:hover:text-green-300"
                   >
                     {contribution.url}
                   </a>

@@ -35,6 +35,7 @@
   background-position: center;
   height: 250px;
 }
+
 .content-div:hover {
   background-image: linear-gradient(
     to right,
@@ -45,7 +46,7 @@
 
 .active-link {
   font-weight: 700;
-  color: #4392e1;
+  color: #298e9e;
 }
 
 .opacity-3 {

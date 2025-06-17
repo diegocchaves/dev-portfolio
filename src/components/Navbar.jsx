@@ -9,6 +9,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import Logo from "../assets/images/Logo1.svg";
+import BackLogo from "../assets/images/black-logo.svg";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -78,7 +79,7 @@ const Navbar = () => {
   }, [theme]);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-gray-100 dark:bg-black text-gray-30 z-10 ">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-[#F5F9FA] dark:bg-black text-gray-30 z-10 ">
       <div className="flex items-center justify-start ">
         <Link
           to="home"
@@ -86,7 +87,11 @@ const Navbar = () => {
           duration={500}
           className="flex justify-start cursor-pointer"
         >
-          <img src={Logo} alt="logo" className="w-8 h-8" />
+          <img
+            src={theme === "dark" ? Logo : BackLogo}
+            alt="logo"
+            className="w-8 h-8"
+          />
         </Link>
       </div>
 
@@ -98,8 +103,7 @@ const Navbar = () => {
               to={link.to}
               smooth={true}
               duration={500}
-              className="cursor-pointer text-black dark:text-white text-sm transition hover:text-blue-600 dark:hover:text-[#a4cfea]
-             "
+              className="cursor-pointer text-black dark:text-white text-sm transition hover:text-[#298E9E]"
               activeClass="active-link"
               spy={true}
             >
@@ -123,7 +127,7 @@ const Navbar = () => {
       {/* hamburge */}
       <div
         onClick={handleClick}
-        className="z-10 text-black dark:text-white md:hidden"
+        className="z-10 text-[#298E9E] dark:text-white md:hidden"
       >
         {!nav ? <FaBars size={20} /> : <FaTimes size={10} />}
       </div>

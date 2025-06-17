@@ -42,7 +42,7 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="flex items-center justify-center py-16 text-gray-800 bg-gray-100 dark:text-gray-300 dark:bg-black md:py-36"
+      className="flex items-center justify-center py-16 text-[#002230] bg-[#E9F2F4] dark:text-gray-300 dark:bg-black md:py-36"
     >
       {/* Contanier */}
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center w-full h-full">
@@ -75,7 +75,7 @@ const Skills = () => {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className={`p-4 bg-gray-900 rounded-lg dark:bg-transparent${
+                  className={`p-4 bg-[#033347] rounded-lg dark:bg-transparent${
                     index === 0
                       ? " ml-8"
                       : index === skills.length - 1

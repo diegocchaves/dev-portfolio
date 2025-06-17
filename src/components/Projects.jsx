@@ -15,7 +15,7 @@ const Projects = () => {
       image: Portfolio,
       Date: "Wed Jun 11 2025 ",
       value: "Completed",
-      color: "text-green-500",
+      color: "text-green-300",
     },
     {
       label: "Micro Actions Blog",
@@ -42,7 +42,7 @@ const Projects = () => {
       image: CuidandoDoMoneyImage,
       Date: "Mon May 8 2023 ",
       value: "Completed",
-      color: "text-green-500",
+      color: "text-green-300",
     },
     {
       label: "Beach Space",
@@ -51,7 +51,7 @@ const Projects = () => {
       image: BeachSpaceImage,
       Date: "Mon May 8 2023 ",
       value: "Completed",
-      color: "text-green-500",
+      color: "text-green-300",
     },
   ];
 
@@ -64,7 +64,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="z-0 py-16 text-gray-800 bg-gray-50 dark:text-gray-300 dark:bg-black md:py-36"
+      className="z-0 py-16 text-[#002230] bg-[#F5F9FA] dark:text-white dark:bg-black md:py-36"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex flex-col items-center pb-8 ">
@@ -76,9 +76,9 @@ const Projects = () => {
           {works.slice(0, visibleCount).map((work, index) => (
             <div
               key={index}
-              className="relative flex items-center justify-start w-full h-full py-6 border border-gray-700 rounded-md md:py-3 md:px-3 "
+              className="relative flex items-center justify-start w-full h-full py-6 bg-white border border-gray-700 rounded-md dark:bg-transparent md:py-3 md:px-3 "
             >
-              <div className="absolute items-center justify-center w-full h-full border border-gray-700 rounded-md p-2bg-gray-50 dark:bg-gray-900 md:relative md:p-0 insert-0 md:flex md:w-80 md:h-80">
+              <div className="absolute items-center justify-center w-full h-full p-2 bg-white border border-gray-700 rounded-md dark:bg-transparent dark:bg-gray-900 md:relative md:p-0 insert-0 md:flex md:w-80 md:h-80">
                 {/* Background Image */}
                 <img
                   src={work.image}
@@ -101,7 +101,7 @@ const Projects = () => {
                     </span>
                     <a
                       href={work.url}
-                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#1da1f2] hover:underline"
+                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#298E9E] dark:hover:text-green-300 hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -114,7 +114,7 @@ const Projects = () => {
                     </span>
                     <a
                       href={work.href}
-                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#1da1f2] hover:underline"
+                      className="md:text-base text-sm font-medium text-black dark:text-white transition md:hover:text-[#298E9E] dark:hover:text-green-300 hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -152,7 +152,7 @@ const Projects = () => {
           <div className="flex items-center justify-center mt-4">
             <button
               onClick={handleLoadMore}
-              className="px-4 py-2 text-sm text-black underline transition-colors duration-300 dark:text-white underline-offset-4 md:hover:text-blue-500"
+              className="px-4 py-2 text-sm text-black underline transition-colors duration-300 dark:text-white underline-offset-4 md:hover:text-[#298E9E] dark:hover:text-green-300"
             >
               Load More
             </button>
@@ -161,7 +161,7 @@ const Projects = () => {
           <div className="flex items-center justify-center mt-4">
             <button
               onClick={() => setVisibleCount(3)}
-              className="px-4 py-2 text-sm text-black underline transition-colors duration-300 dark:text-white underline-offset-4 hover:text-blue-500"
+              className="px-4 py-2 text-sm text-black underline transition-colors duration-300 dark:text-white underline-offset-4 hover:text-[#298E9E] dark:hover:text-green-300"
             >
               Show Less
             </button>

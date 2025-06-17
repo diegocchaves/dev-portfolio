@@ -18,7 +18,7 @@ const Contatc = () => {
   return (
     <div
       name="contact"
-      className="flex flex-col items-center justify-center p-4 py-16 text-gray-800 bg-gray-50 dark:text-gray-300 dark:bg-black md:py-36"
+      className="flex flex-col items-center justify-center p-4 py-16 text-[#002230] bg-[#F5F9FA] dark:text-gray-300 dark:bg-black md:py-36"
     >
       <div className="flex flex-col text-center md:py-10 ">
         <p className="inline text-lg font-bold md:text-xl">[ Contact ]</p>
@@ -30,7 +30,7 @@ const Contatc = () => {
       <form
         method="POST"
         action="https://getform.io/f/f437e598-9e82-4608-8df9-dff71cc633c9"
-        className="flex flex-col max-w-[600px] w-full border border-gray-700 shadow-lg shadow-gray-300 dark:shadow-none p-4 md:p-8 rounded-lg text-sm  "
+        className="flex flex-col max-w-[600px] w-full border border-gray-700 shadow-lg shadow-gray-300 dark:shadow-none p-4 md:p-8 rounded-lg text-sm dark:bg-transparent bg-white  "
         onSubmit={handleSubmit}
         autoComplete="off"
       >
@@ -57,7 +57,7 @@ const Contatc = () => {
           placeholder="Message"
           onChange={handleChange}
         ></textarea>
-        <button className="flex items-center px-4 py-3 mx-auto my-8 text-black bg-blue-200 border-2 border-black rounded-md dark:text-white dark:bg-gray-900 group hover:bg-gray-900 hover:border-gray-50 hover:text-white">
+        <button className="flex items-center px-4 py-3 mx-auto my-8 text-white rounded-md bg-[#298E9E] dark:text-black dark:bg-white dark:hover:bg-gray-200 group hover:bg-gray-900 hover:border-gray-50 hover:text-white">
           Let's Collaborate
         </button>
       </form>

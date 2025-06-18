@@ -3,7 +3,6 @@ import {
   FaBars,
   FaTimes,
   FaGithub,
-  FaEnvelope,
   FaLinkedin,
   FaFileAlt,
 } from "react-icons/fa";
@@ -40,7 +39,7 @@ const Navbar = () => {
     { label: "]", to: "" },
   ];
 
-  // Filter out [ and ] on mobile
+  // Filter out "[" and "]" on mobile
   const filteredLinks = isMobile
     ? links.filter((link) => link.label !== "[" && link.label !== "]")
     : links;
@@ -68,6 +67,7 @@ const Navbar = () => {
     },
   ];
 
+  // Manage dark and light theme
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
@@ -78,6 +78,15 @@ const Navbar = () => {
     }
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  // Hide the social icons <nav> when the screen width is 1024px or less
+  const [showIcons, setShowIcons] = useState(window.innerWidth > 1024);
+
+  useEffect(() => {
+    const handleResize = () => setShowIcons(window.innerWidth > 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-6 bg-[#F5F9FA] dark:bg-black text-gray-30 z-10 ">
@@ -144,7 +153,7 @@ const Navbar = () => {
         onClick={handleClick}
         className="z-10 text-[#298E9E] dark:text-white md:hidden"
       >
-        {!nav ? <FaBars size={20} /> : <FaTimes size={10} />}
+        {!nav ? <FaBars size={20} /> : <FaTimes size={20} />}
       </div>
 
       {/* mobile menu */}
@@ -170,26 +179,28 @@ const Navbar = () => {
       </nav>
 
       {/* social icons */}
-      <nav className="hidden md:flex fixed flex-col top-[35%] z-10">
-        {icons.map((icon, index) => (
-          <div
-            key={index}
-            className={`w-[110px] h-[60px] flex items-center ml-[-96px] hover:ml-[-10px] duration-300 ${icon.color}`}
-          >
-            <a
-              href={icon.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-between w-full text-gray-800 dark:text-gray-300"
+      {showIcons && (
+        <nav className="hidden lg:flex fixed flex-col top-[35%] z-10">
+          {icons.map((icon, index) => (
+            <div
+              key={index}
+              className="w-[110px] h-[60px] flex items-center ml-[-96px] hover:ml-[-10px] duration-300"
             >
-              <p className="flex flex-col items-center justify-center">
-                {icon.label}
-              </p>
-              {icon.icon}
-            </a>
-          </div>
-        ))}
-      </nav>
+              <a
+                href={icon.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-between w-full text-gray-800 dark:text-gray-300"
+              >
+                <p className="flex flex-col items-center justify-center">
+                  {icon.label}
+                </p>
+                {icon.icon}
+              </a>
+            </div>
+          ))}
+        </nav>
+      )}
     </div>
   );
 };

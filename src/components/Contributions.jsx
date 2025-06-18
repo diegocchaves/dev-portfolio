@@ -1,7 +1,7 @@
 import { GrStatusGoodSmall } from "react-icons/gr";
 import { FaCodePullRequest } from "react-icons/fa6";
-import MicroActionsImage from "../assets/images/ma-mockup.svg";
-import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
+import MicroActionsImage from "../assets/images/mockup-ma.jpg";
+import MicroActionsBlog from "../assets/images/mockup-ma-blog.jpg";
 
 const Contributions = () => {
   const contributions = [

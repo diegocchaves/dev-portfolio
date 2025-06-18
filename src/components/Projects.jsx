@@ -1,10 +1,10 @@
 import React from "react";
 import { GrStatusGoodSmall } from "react-icons/gr";
-import BeachSpaceImage from "../assets/images/bs-mockup.svg";
-import CuidandoDoMoneyImage from "../assets/images/cm-mockup.svg";
-import MicroActionsImage from "../assets/images/ma-mockup.svg";
-import MicroActionsBlog from "../assets/images/ma-blog-mockup.svg";
-import Portfolio from "../assets/images/dc-portfolio-mockup.svg";
+import BeachSpaceImage from "../assets/images/mockup-bs.jpg";
+import CuidandoDoMoneyImage from "../assets/images/mockup-cm.jpg";
+import MicroActionsImage from "../assets/images/mockup-ma.jpg";
+import MicroActionsBlog from "../assets/images/mockup-ma-blog.jpg";
+import Portfolio from "../assets/images/mockup-devport.jpg";
 
 const Projects = () => {
   const works = [

@@ -1,7 +1,7 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import Photo from "../assets/images/dev-bckgrd.svg"; // Ensure this path is correct
+import Photo from "../assets/images/dev-bckgrd.jpg"; // Ensure this path is correct
 
 const Home = () => {
   return (

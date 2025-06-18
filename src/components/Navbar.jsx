@@ -180,17 +180,17 @@ const Navbar = () => {
 
       {/* social icons */}
       {showIcons && (
-        <nav className="hidden lg:flex fixed flex-col top-[35%] z-10">
+        <nav className="hidden lg:flex fixed flex-col top-[35%] z-10 cursor-pointer">
           {icons.map((icon, index) => (
             <div
               key={index}
-              className="w-[110px] h-[60px] flex items-center ml-[-96px] hover:ml-[-10px] duration-300"
+              className="w-[110px] h-[80px] flex items-center ml-[-98px] hover:ml-[-18px] duration-500 "
             >
               <a
                 href={icon.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex justify-between w-full text-gray-800 dark:text-gray-300"
+                className="flex justify-between w-full text-gray-800 hover:rounded-md dark:text-gray-300 dark:hover:text-gray-700 hover:bg-white hover:p-2 hover:w-full hover:items-center"
               >
                 <p className="flex flex-col items-center justify-center">
                   {icon.label}

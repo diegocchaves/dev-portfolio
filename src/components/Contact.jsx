@@ -83,7 +83,7 @@ const Contact = () => {
         <input
           type="hidden"
           name="access_key"
-          value="ad2d7ecd-4086-444a-90f8-0cad43733952"
+          value="1d8d766a-8288-4204-a070-685ed55f744c"
         />
         <input
           type="hidden"
@@ -108,7 +108,7 @@ const Contact = () => {
             placeholder="John Doe"
             required
             autoFocus
-            className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-500 dark:border-gray-400 dark:focus:ring-green-500"
+            className="w-full px-3 py-2 text-black placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-500 dark:border-gray-400 dark:focus:ring-[#298E9E]"
           />
         </div>
         <div className="mb-6">
@@ -125,7 +125,7 @@ const Contact = () => {
             placeholder="you@company.com"
             required
             autoFocus
-            className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-500 dark:border-gray-400 dark:focus:ring-green-500"
+            className="w-full px-3 py-2 text-black placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-500 dark:border-gray-400 dark:focus:ring-[#298E9E]"
           />
         </div>
         <div className="mb-6">
@@ -137,7 +137,7 @@ const Contact = () => {
             name="message"
             id="message"
             placeholder="Your Message"
-            className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-500 dark:border-gray-400 dark:focus:ring-green-500"
+            className="w-full px-3 py-2 text-black placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-500 dark:border-gray-400 dark:focus:ring-[#298E9E]"
           ></textarea>
         </div>
         <div className="mb-6">
